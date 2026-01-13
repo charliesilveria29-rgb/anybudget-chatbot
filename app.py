@@ -22,7 +22,7 @@ st.sidebar.title("🤖 AI Tools")
 mode = st.sidebar.radio("Select a tool:", ["Print Expert (Chat)", "Image Generator"])
 
 # ==========================================
-# MODE 1: THE TEXT CHAT (Now knows the date!)
+# MODE 1: THE TEXT CHAT (Fixed: Uses Gemini 2.5)
 # ==========================================
 if mode == "Print Expert (Chat)":
     st.title("AnyBudget Assistant 💬")
@@ -35,21 +35,24 @@ if mode == "Print Expert (Chat)":
     You are the AnyBudget AI Assistant.
     Today's date is {today}. (You must know this to answer questions about the current year).
     
-    You have vast knowledge, but if asked about printing, strictly follow:
+    You have vast knowledge about history, science, coding, and the world. 
+    You are free to answer ANY question the user asks.
+
+    HOWEVER, if asked specifically about **printing services**, strictly follow:
     - Acceptable formats: PDF, AI, PSD, JPG.
     - Bleeds: 0.125 inches.
     - Resolution: 300 DPI minimum.
-    For all other topics, be helpful and creative.
     """
     
+    # --- CRITICAL FIX: Using the model we KNOW works for you ---
     model = genai.GenerativeModel(
-        model_name="gemini-1.5-flash", # Switched to 1.5-flash (Standard & Reliable)
+        model_name="gemini-2.5-flash", 
         system_instruction=system_instruction
     )
 
     if "messages" not in st.session_state:
         st.session_state.messages = [
-            {"role": "model", "parts": f"Hello! I know it's {today.year}. How can I help?"}
+            {"role": "model", "parts": f"Hello! I am running on Gemini 2.5. I know it is {today.year}. Ask me anything!"}
         ]
 
     for message in st.session_state.messages:
@@ -73,7 +76,7 @@ if mode == "Print Expert (Chat)":
                 st.error(f"Error: {e}")
 
 # ==========================================
-# MODE 2: IMAGE GENERATOR (Fixed Model)
+# MODE 2: IMAGE GENERATOR (Fixed: Uses Imagen 3)
 # ==========================================
 elif mode == "Image Generator":
     st.title("Art Studio 🎨")
