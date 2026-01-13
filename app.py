@@ -25,10 +25,10 @@ with st.sidebar:
     st.title("🖨️ AnyBudget Tools")
     st.write("Choose your assistant:")
     
-    # We added 'label_visibility="collapsed"' to hide the name but keep the code happy (fixes red warning)
+    # Kept the fix for the red text warning
     mode = st.radio(
         "Select Tool",
-        ["Print Expert (Chat)", "Image Generator 🎨", "Marketing Copywriter ✍️", "Print School 🎓", "Idea Generator 💡"],
+        ["Print Expert (Chat)", "Marketing Copywriter ✍️", "Print School 🎓", "Idea Generator 💡"],
         index=0,
         label_visibility="collapsed"
     )
@@ -47,97 +47,80 @@ if st.session_state.current_mode != mode:
     st.session_state.current_mode = mode
 
 # ==========================================
-# 1. IMAGE GENERATOR 🎨
-# ==========================================
-if mode == "Image Generator 🎨":
-    st.title("Art Studio 🎨")
-    st.write("Generate images for your flyers or business cards.")
-    
-    img_prompt = st.text_area("Describe the image you want:", height=100, placeholder="A modern coffee shop logo with a cat...")
-    
-    if st.button("Generate Image ✨"):
-        if not img_prompt:
-            st.warning("Please describe an image first!")
-        else:
-            with st.spinner("Painting..."):
-                try:
-                    # Using the standard Imagen model (best for paid/billing accounts)
-                    img_model = genai.GenerativeModel("imagen-3.0-generate-001")
-                    response = img_model.generate_content(img_prompt)
-                    
-                    if response.parts:
-                        # This line requires google-generativeai>=0.8.3
-                        st.image(response.parts[0].image, caption=img_prompt, use_column_width=True)
-                    else:
-                        st.error("Blocked by safety filters. Try a different prompt.")
-                except Exception as e:
-                    st.error(f"Error: {e}")
-                    st.info("Tip: If you see 'Unknown field: image', please Reboot the app to update libraries.")
-    
-    # Stop the script here so the chat bar doesn't appear
-    st.stop()
-
-# ==========================================
-# 2. TEXT ASSISTANTS (Shared Logic)
+# DEFINE MODES (Text Only - Super Stable)
 # ==========================================
 
-# Define Personas based on Mode
 if mode == "Print Expert (Chat)":
     page_title = "AnyBudget Assistant 💬"
     system_instruction = f"""
     You are the AnyBudget AI Assistant. Today is {today}.
-    RULES:
+    
+    YOUR RULES:
     - Acceptable formats: PDF, AI, PSD, JPG.
-    - Bleeds: 0.125 inches required.
-    - Resolution: 300 DPI.
-    For other topics, answer freely.
+    - Bleeds: 0.125 inches required on all sides.
+    - Resolution: 300 DPI minimum.
+    
+    For other topics (history, science, etc.), answer freely and helpfully.
     """
     initial_msg = "Hello! Ask me about file specs, bleeds, or general questions."
 
 elif mode == "Marketing Copywriter ✍️":
     page_title = "Marketing Copywriter ✍️"
     system_instruction = """
-    You are an expert Copywriter for AnyBudget Printing.
-    Write CATCHY, PERSUASIVE text for flyers, cards, and brochures.
+    You are an expert Marketing Copywriter for AnyBudget Printing.
+    Your goal is to write CATCHY, PERSUASIVE, and PROFESSIONAL text.
+    - If user asks for a headline, give 3 punchy options.
+    - If user asks for flyer text, organize it with headers and bullet points.
+    - Keep it short enough for physical print.
     """
-    initial_msg = "What are we writing today? (e.g., 'Headline for a sale')"
+    initial_msg = "What are we writing today? (e.g., 'Headline for a pizza sale')"
 
 elif mode == "Print School 🎓":
     page_title = "Print School 🎓"
     system_instruction = """
     You are a friendly Printing Tutor. 
-    Explain terms like CMYK, GSM, and Bleed simply.
+    Explain complex printing terms (CMYK, GSM, Vector vs Raster, Bleed) in simple, easy-to-understand language.
+    Use analogies (e.g., "Resolution is like the thread count in sheets").
     """
-    initial_msg = "Class is in session! What term confuses you?"
+    initial_msg = "Class is in session! What printing term confuses you?"
 
 elif mode == "Idea Generator 💡":
     page_title = "Idea Generator 💡"
     system_instruction = """
-    You are a Business Growth Consultant.
-    Suggest 3-5 printed products for the user's business.
+    You are a Business Growth Consultant for AnyBudget.
+    When a user tells you their business type, suggest 3-5 specific printed products they need to grow.
+    Explain WHY they need them.
     """
-    initial_msg = "What kind of business do you have?"
+    initial_msg = "What kind of business do you have? (e.g., 'Coffee Shop', 'Real Estate')"
 
-# --- CHAT INTERFACE ---
+# ==========================================
+# CHAT INTERFACE
+# ==========================================
 st.title(page_title)
 
+# Initialize the Model
 model = genai.GenerativeModel(
     model_name="gemini-2.5-flash", 
     system_instruction=system_instruction
 )
 
+# Chat History Setup
 if "messages" not in st.session_state or len(st.session_state.messages) == 0:
     st.session_state.messages = [{"role": "model", "parts": initial_msg}]
 
+# Display Chat
 for message in st.session_state.messages:
     role = "user" if message["role"] == "user" else "assistant"
     with st.chat_message(role):
         st.markdown(message["parts"])
 
+# Handle Input
 if prompt := st.chat_input("Type here..."):
+    # User message
     st.chat_message("user").markdown(prompt)
     st.session_state.messages.append({"role": "user", "parts": prompt})
 
+    # AI message
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             try:
