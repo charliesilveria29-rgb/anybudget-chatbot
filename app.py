@@ -51,7 +51,7 @@ if st.session_state.current_mode != mode:
 # ==========================================
 
 if mode == "Print Expert (Chat)":
-    page_title = "AnyBudget Assistant 💬"
+    page_title = "Any Budget Ai Assistant 💬"
     system_instruction = f"""
     You are the AnyBudget AI Assistant. Today is {today}.
     
