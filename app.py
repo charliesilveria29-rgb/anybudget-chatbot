@@ -22,7 +22,7 @@ today = datetime.date.today()
 
 # --- SIDEBAR NAVIGATION ---
 with st.sidebar:
-    st.title("🖨️ AnyBudget Agents")
+    st.title("🖨️ AnyBudget Tools")
     st.write("Choose your assistant:")
     
     # Kept the fix for the red text warning
