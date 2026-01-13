@@ -2,42 +2,63 @@ import streamlit as st
 import google.generativeai as genai
 import os
 
-st.title("🛠️ AnyBudget System Diagnostic")
+# 1. Configure the Page
+st.set_page_config(page_title="AnyBudget AI", page_icon="💬")
+st.title("AnyBudget AI Assistant")
 
-# 1. Get the API Key
+# 2. Connect to the Brain (Gemini)
 api_key = os.environ.get("GOOGLE_API_KEY") 
 if not api_key:
     try:
         api_key = st.secrets["GOOGLE_API_KEY"]
     except:
-        st.error("❌ API Key not found in Secrets!")
+        st.info("Please add your GOOGLE_API_KEY to the secrets to continue.")
         st.stop()
 
 genai.configure(api_key=api_key)
 
-# 2. List Available Models
-st.write("Contacting Google to see available models...")
+# 3. Define the Persona
+system_instruction = """
+You are the AnyBudget AI Assistant. 
+You help customers with file specifications for printing.
+- Acceptable formats: PDF, AI, PSD, JPG.
+- Bleeds: 0.125 inches required on all sides.
+- Resolution: 300 DPI minimum.
+- Tone: Professional, helpful, and concise.
+"""
 
-try:
-    my_models = []
-    # Ask Google for the list of models this key can access
-    for m in genai.list_models():
-        if 'generateContent' in m.supported_generation_methods:
-            my_models.append(m.name)
+# --- THE FIX: Using your specific model version ---
+model = genai.GenerativeModel(
+    model_name="gemini-2.5-flash",
+    system_instruction=system_instruction
+)
 
-    if len(my_models) > 0:
-        st.success(f"✅ Success! Your key has access to {len(my_models)} models.")
-        st.write("Here are the valid names:")
-        st.code(my_models)
-        
-        # Test the first one found
-        test_model_name = my_models[0]
-        st.write(f"Testing the first one: `{test_model_name}`...")
-        model = genai.GenerativeModel(test_model_name)
-        response = model.generate_content("Say hello!")
-        st.info(f"Response: {response.text}")
-    else:
-        st.error("⚠️ Your key works, but Google returned 0 models. This usually means the API has not been enabled for this project yet.")
+# 4. Chat History Setup
+if "messages" not in st.session_state:
+    st.session_state.messages = [
+        {"role": "model", "parts": "Hello! I can help with file specs, bleed requirements, and turnaround times. What's on your mind?"}
+    ]
 
-except Exception as e:
-    st.error(f"❌ Connection Error: {e}")
+# 5. Display Chat Messages
+for message in st.session_state.messages:
+    role = "user" if message["role"] == "user" else "assistant"
+    with st.chat_message(role):
+        st.markdown(message["parts"])
+
+# 6. Handle User Input
+if prompt := st.chat_input("Ask about print specs..."):
+    # Show user message
+    st.chat_message("user").markdown(prompt)
+    st.session_state.messages.append({"role": "user", "parts": prompt})
+
+    # Generate and show response
+    with st.chat_message("assistant"):
+        try:
+            chat = model.start_chat(history=[
+                {"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1]
+            ])
+            response = chat.send_message(prompt)
+            st.markdown(response.text)
+            st.session_state.messages.append({"role": "model", "parts": response.text})
+        except Exception as e:
+            st.error(f"An error occurred: {e}")
