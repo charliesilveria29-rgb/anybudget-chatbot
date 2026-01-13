@@ -25,7 +25,6 @@ with st.sidebar:
     st.title("🖨️ AnyBudget Tools")
     st.write("Choose your assistant:")
     
-    # The "Gemini Style" Buttons
     mode = st.radio(
         "",
         ["Print Expert (Chat)", "Marketing Copywriter ✍️", "Print School 🎓", "Idea Generator 💡"],
@@ -37,7 +36,7 @@ with st.sidebar:
 
 # --- APP LOGIC ---
 
-# DEFAULT: Clear history if the user switches modes so the bot doesn't get confused
+# Reset history if mode changes
 if "current_mode" not in st.session_state:
     st.session_state.current_mode = mode
 
@@ -45,102 +44,112 @@ if st.session_state.current_mode != mode:
     st.session_state.messages = []
     st.session_state.current_mode = mode
 
-# ==========================================
-# 1. PRINT EXPERT (The Original)
-# ==========================================
+# Define Prompts based on Mode
 if mode == "Print Expert (Chat)":
-    st.title("AnyBudget Assistant 💬")
-    st.write("I can help with file specs, bleeds, and turnaround times.")
-    
+    page_title = "AnyBudget Assistant 💬"
+    page_helper = "Ask me about file specs, bleeds, or general questions."
     system_instruction = f"""
     You are the AnyBudget AI Assistant. Today is {today}.
-    
     YOUR RULES:
     - Acceptable formats: PDF, AI, PSD, JPG.
     - Bleeds: 0.125 inches required.
     - Resolution: 300 DPI.
-    
-    For other topics (history, science), answer freely and helpfully.
+    For other topics, answer freely and helpfully.
     """
-    
     initial_msg = "Hello! Ask me about file specs, bleeds, or general questions."
 
-# ==========================================
-# 2. MARKETING COPYWRITER (Write Anything)
-# ==========================================
 elif mode == "Marketing Copywriter ✍️":
-    st.title("Marketing Copywriter ✍️")
-    st.write("Stuck on what to say? I'll write your headlines, flyers, and card text.")
-    
+    page_title = "Marketing Copywriter ✍️"
+    page_helper = "I'll write your headlines, flyers, and card text."
     system_instruction = f"""
     You are an expert Marketing Copywriter for AnyBudget Printing.
-    Your goal is to write CATCHY, PERSUASIVE, and PROFESSIONAL text for printed materials.
-    
-    - If user asks for a headline, give 3 punchy options.
-    - If user asks for flyer text, organize it with headers and bullet points.
-    - Keep it short enough to fit on physical paper/cards.
+    Write CATCHY, PERSUASIVE text.
+    - Give 3 headline options if asked.
+    - Keep it short enough for print.
     """
-    
-    initial_msg = "What are we writing today? (e.g., 'Write a headline for a pizza sale' or 'Text for a landscaper business card')"
+    initial_msg = "What are we writing today? (e.g., 'Headline for a pizza sale')"
 
-# ==========================================
-# 3. PRINT SCHOOL (Help Me Learn)
-# ==========================================
 elif mode == "Print School 🎓":
-    st.title("Print School 🎓")
-    st.write("Confused by paper types or coatings? Ask me!")
-    
+    page_title = "Print School 🎓"
+    page_helper = "Confused by paper types? Ask me!"
     system_instruction = f"""
     You are a friendly Printing Tutor. 
-    Explain complex printing terms (CMYK, GSM, Vector vs Raster, Bleed) in simple, easy-to-understand language.
-    Use analogies (e.g., "Resolution is like the thread count in sheets").
+    Explain complex printing terms (CMYK, GSM, Bleed) in simple language.
     """
-    
-    initial_msg = "Class is in session! What printing term confuses you? (e.g., 'What is GSM?' or 'Why do I need bleed?')"
+    initial_msg = "Class is in session! What term confuses you?"
 
-# ==========================================
-# 4. IDEA GENERATOR (Boost My Business)
-# ==========================================
 elif mode == "Idea Generator 💡":
-    st.title("Idea Generator 💡")
-    st.write("Tell me your business, and I'll suggest what you should print.")
-    
+    page_title = "Idea Generator 💡"
+    page_helper = "Tell me your business, and I'll suggest products."
     system_instruction = f"""
-    You are a Business Growth Consultant for AnyBudget.
-    When a user tells you their business type, suggest 3-5 specific printed products they need to grow.
-    Explain WHY they need them.
-    (Example: A Realtor needs 'Open House' A-Frame signs and high-gloss business cards).
+    You are a Business Growth Consultant.
+    Suggest 3-5 specific printed products for the user's business type.
     """
-    
-    initial_msg = "What kind of business do you have? (e.g., 'Coffee Shop', 'Real Estate', 'Band')"
+    initial_msg = "What kind of business do you have?"
 
-# --- SHARED CHAT LOGIC ---
-# This part runs for ALL modes, using the specific 'system_instruction' set above
-
+# --- SHARED GEMINI LOGIC ---
 model = genai.GenerativeModel(
     model_name="gemini-2.5-flash", 
     system_instruction=system_instruction
 )
 
+# Initialize Chat History
 if "messages" not in st.session_state or len(st.session_state.messages) == 0:
     st.session_state.messages = [{"role": "model", "parts": initial_msg}]
 
-for message in st.session_state.messages:
-    role = "user" if message["role"] == "user" else "assistant"
-    with st.chat_message(role):
-        st.markdown(message["parts"])
+# --- HELPER FUNCTION: Handle the Chat Response ---
+def handle_response(user_input):
+    # Add user message
+    st.session_state.messages.append({"role": "user", "parts": user_input})
+    
+    # Generate response
+    try:
+        chat = model.start_chat(history=[
+            {"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1]
+        ])
+        response = chat.send_message(user_input)
+        st.session_state.messages.append({"role": "model", "parts": response.text})
+    except Exception as e:
+        st.error(f"Error: {e}")
 
-if prompt := st.chat_input("Type here..."):
-    st.chat_message("user").markdown(prompt)
-    st.session_state.messages.append({"role": "user", "parts": prompt})
+# ==========================================
+# THE LAYOUT LOGIC (Center vs Bottom)
+# ==========================================
 
-    with st.chat_message("assistant"):
-        try:
-            chat = model.start_chat(history=[
-                {"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1]
-            ])
-            response = chat.send_message(prompt)
-            st.markdown(response.text)
-            st.session_state.messages.append({"role": "model", "parts": response.text})
-        except Exception as e:
-            st.error(f"Error: {e}")
+# CHECK: Is this the start of the chat? (Only 1 message = the greeting)
+if len(st.session_state.messages) == 1:
+    # --- PHASE 1: CENTERED "HERO" VIEW ---
+    
+    # Add some spacer to push it down
+    st.markdown("<br><br><br><br>", unsafe_allow_html=True)
+    
+    # Center the Title and Helper Text
+    st.markdown(f"<h1 style='text-align: center;'>{page_title}</h1>", unsafe_allow_html=True)
+    st.markdown(f"<p style='text-align: center;'>{page_helper}</p>", unsafe_allow_html=True)
+    
+    # Create 3 columns to center the input box nicely
+    col1, col2, col3 = st.columns([1, 2, 1])
+    
+    with col2:
+        # The "Start" Input
+        start_input = st.text_input(" ", placeholder="Type here to start...", label_visibility="collapsed")
+        
+        if start_input:
+            # If user types here, handle it and RERUN the app to switch views
+            handle_response(start_input)
+            st.rerun()
+
+else:
+    # --- PHASE 2: STANDARD CHAT VIEW ---
+    st.title(page_title)
+    
+    # Display Chat History
+    for message in st.session_state.messages:
+        role = "user" if message["role"] == "user" else "assistant"
+        with st.chat_message(role):
+            st.markdown(message["parts"])
+
+    # Bottom Input Bar
+    if prompt := st.chat_input("Type here..."):
+        handle_response(prompt)
+        st.rerun()
