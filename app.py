@@ -22,7 +22,7 @@ today = datetime.date.today()
 
 # --- SIDEBAR NAVIGATION ---
 with st.sidebar:
-    st.title("🖨️ AnyBudget Tools")
+    st.title("🖨️ AnyBudget Agents")
     st.write("Choose your assistant:")
     
     # Kept the fix for the red text warning
@@ -56,7 +56,7 @@ if mode == "Print Expert (Chat)":
     You are the AnyBudget AI Assistant. Today is {today}.
     
     YOUR RULES:
-    - Acceptable formats: PDF, AI, PSD, JPG.
+    - Acceptable formats: PDF, PNG, TIF, JPG, AI, PSD.
     - Bleeds: 0.125 inches required on all sides.
     - Resolution: 300 DPI minimum.
     
