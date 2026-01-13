@@ -1,8 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
 import os
-from PIL import Image
-import io
+import datetime
 
 # 1. Configure the Page
 st.set_page_config(page_title="AnyBudget AI Suite", page_icon="🎨")
@@ -20,17 +19,22 @@ genai.configure(api_key=api_key)
 
 # --- SIDEBAR NAVIGATION ---
 st.sidebar.title("🤖 AI Tools")
-mode = st.sidebar.radio("Select a tool:", ["Print Expert (Chat)", "Nano Banana (Images)"])
+mode = st.sidebar.radio("Select a tool:", ["Print Expert (Chat)", "Image Generator"])
 
 # ==========================================
-# MODE 1: THE TEXT CHAT (Your existing bot)
+# MODE 1: THE TEXT CHAT (Now knows the date!)
 # ==========================================
 if mode == "Print Expert (Chat)":
     st.title("AnyBudget Assistant 💬")
     
-    # Define Persona
-    system_instruction = """
+    # Get today's date dynamically
+    today = datetime.date.today()
+    
+    # Define Persona with the CURRENT DATE
+    system_instruction = f"""
     You are the AnyBudget AI Assistant.
+    Today's date is {today}. (You must know this to answer questions about the current year).
+    
     You have vast knowledge, but if asked about printing, strictly follow:
     - Acceptable formats: PDF, AI, PSD, JPG.
     - Bleeds: 0.125 inches.
@@ -39,13 +43,13 @@ if mode == "Print Expert (Chat)":
     """
     
     model = genai.GenerativeModel(
-        model_name="gemini-2.5-flash", 
+        model_name="gemini-1.5-flash", # Switched to 1.5-flash (Standard & Reliable)
         system_instruction=system_instruction
     )
 
     if "messages" not in st.session_state:
         st.session_state.messages = [
-            {"role": "model", "parts": "Hello! I am ready to help with print specs or general knowledge."}
+            {"role": "model", "parts": f"Hello! I know it's {today.year}. How can I help?"}
         ]
 
     for message in st.session_state.messages:
@@ -69,34 +73,29 @@ if mode == "Print Expert (Chat)":
                 st.error(f"Error: {e}")
 
 # ==========================================
-# MODE 2: NANO BANANA (Image Generator)
+# MODE 2: IMAGE GENERATOR (Fixed Model)
 # ==========================================
-elif mode == "Nano Banana (Images)":
-    st.title("Nano Banana Art Studio 🎨")
-    st.write("Generate high-quality images using the `gemini-2.5-flash-image` model.")
+elif mode == "Image Generator":
+    st.title("Art Studio 🎨")
+    st.write("Generate images using the Standard Imagen model.")
 
-    # Input for image prompt
-    img_prompt = st.text_area("Describe the image you want:", height=100, placeholder="A futuristic printing press made of neon lights, cyberpunk style...")
+    img_prompt = st.text_area("Describe the image you want:", height=100, placeholder="A futuristic printing press...")
 
     if st.button("Generate Image ✨"):
         if not img_prompt:
             st.warning("Please describe an image first!")
         else:
-            with st.spinner("Nano Banana is painting..."):
+            with st.spinner("Painting... (This may take 30 seconds)"):
                 try:
-                    # Connect to the Image Model
-                    img_model = genai.GenerativeModel("gemini-2.5-flash-image")
+                    # Switch to the standard Imagen 3 model (More reliable for free tier)
+                    img_model = genai.GenerativeModel("imagen-3.0-generate-001")
                     
-                    # Generate
                     response = img_model.generate_content(img_prompt)
                     
-                    # Display Result
                     if response.parts:
-                        # Streamlit handles the image display automatically from the response
                         st.image(response.parts[0].image, caption=img_prompt, use_column_width=True)
                     else:
-                        st.error("The model didn't return an image. It might have been blocked by safety filters.")
+                        st.error("Blocked by safety filters. Try a different prompt.")
                         
                 except Exception as e:
-                    st.error(f"Generation Error: {e}")
-                    st.info("Note: If this model name fails, try 'gemini-pro-vision' or check if your key has image permissions.")
+                    st.error(f"Error: {e}")
