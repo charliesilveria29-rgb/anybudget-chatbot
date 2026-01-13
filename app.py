@@ -25,10 +25,12 @@ with st.sidebar:
     st.title("🖨️ AnyBudget Tools")
     st.write("Choose your assistant:")
     
+    # We added 'label_visibility="collapsed"' to hide the name but keep the code happy (fixes red warning)
     mode = st.radio(
-        "",
+        "Select Tool",
         ["Print Expert (Chat)", "Image Generator 🎨", "Marketing Copywriter ✍️", "Print School 🎓", "Idea Generator 💡"],
-        index=0
+        index=0,
+        label_visibility="collapsed"
     )
     
     st.markdown("---")
@@ -45,84 +47,80 @@ if st.session_state.current_mode != mode:
     st.session_state.current_mode = mode
 
 # ==========================================
-# 1. PRINT EXPERT (Chat)
+# 1. IMAGE GENERATOR 🎨
 # ==========================================
-if mode == "Print Expert (Chat)":
-    st.title("AnyBudget Assistant 💬")
-    system_instruction = f"""
-    You are the AnyBudget AI Assistant. Today is {today}.
-    RULES:
-    - Acceptable formats: PDF, AI, PSD, JPG.
-    - Bleeds: 0.125 inches.
-    - Resolution: 300 DPI.
-    For other topics, answer freely.
-    """
-    initial_msg = "Hello! Ask me about file specs, bleeds, or general questions."
-
-# ==========================================
-# 2. IMAGE GENERATOR (Nano Banana Returns!)
-# ==========================================
-elif mode == "Image Generator 🎨":
+if mode == "Image Generator 🎨":
     st.title("Art Studio 🎨")
     st.write("Generate images for your flyers or business cards.")
     
-    # We don't use the chat loop for this one
     img_prompt = st.text_area("Describe the image you want:", height=100, placeholder="A modern coffee shop logo with a cat...")
     
     if st.button("Generate Image ✨"):
         if not img_prompt:
             st.warning("Please describe an image first!")
         else:
-            with st.spinner("Generating..."):
+            with st.spinner("Painting..."):
                 try:
-                    # Using the standard Imagen model (now unlocked for you)
-                    img_model = genai.GenerativeModel("gemini-2.5-flash-image")
+                    # Using the standard Imagen model (best for paid/billing accounts)
+                    img_model = genai.GenerativeModel("imagen-3.0-generate-001")
                     response = img_model.generate_content(img_prompt)
                     
                     if response.parts:
+                        # This line requires google-generativeai>=0.8.3
                         st.image(response.parts[0].image, caption=img_prompt, use_column_width=True)
                     else:
-                        st.error("Blocked by safety filters.")
+                        st.error("Blocked by safety filters. Try a different prompt.")
                 except Exception as e:
                     st.error(f"Error: {e}")
+                    st.info("Tip: If you see 'Unknown field: image', please Reboot the app to update libraries.")
     
-    # Stop the rest of the script so we don't show the chat bar
+    # Stop the script here so the chat bar doesn't appear
     st.stop()
 
 # ==========================================
-# 3. MARKETING COPYWRITER
+# 2. TEXT ASSISTANTS (Shared Logic)
 # ==========================================
-elif mode == "Marketing Copywriter ✍️":
-    st.title("Marketing Copywriter ✍️")
+
+# Define Personas based on Mode
+if mode == "Print Expert (Chat)":
+    page_title = "AnyBudget Assistant 💬"
     system_instruction = f"""
+    You are the AnyBudget AI Assistant. Today is {today}.
+    RULES:
+    - Acceptable formats: PDF, AI, PSD, JPG.
+    - Bleeds: 0.125 inches required.
+    - Resolution: 300 DPI.
+    For other topics, answer freely.
+    """
+    initial_msg = "Hello! Ask me about file specs, bleeds, or general questions."
+
+elif mode == "Marketing Copywriter ✍️":
+    page_title = "Marketing Copywriter ✍️"
+    system_instruction = """
     You are an expert Copywriter for AnyBudget Printing.
     Write CATCHY, PERSUASIVE text for flyers, cards, and brochures.
     """
     initial_msg = "What are we writing today? (e.g., 'Headline for a sale')"
 
-# ==========================================
-# 4. PRINT SCHOOL
-# ==========================================
 elif mode == "Print School 🎓":
-    st.title("Print School 🎓")
-    system_instruction = f"""
+    page_title = "Print School 🎓"
+    system_instruction = """
     You are a friendly Printing Tutor. 
     Explain terms like CMYK, GSM, and Bleed simply.
     """
     initial_msg = "Class is in session! What term confuses you?"
 
-# ==========================================
-# 5. IDEA GENERATOR
-# ==========================================
 elif mode == "Idea Generator 💡":
-    st.title("Idea Generator 💡")
-    system_instruction = f"""
+    page_title = "Idea Generator 💡"
+    system_instruction = """
     You are a Business Growth Consultant.
     Suggest 3-5 printed products for the user's business.
     """
     initial_msg = "What kind of business do you have?"
 
-# --- SHARED CHAT LOGIC (For everything except Images) ---
+# --- CHAT INTERFACE ---
+st.title(page_title)
+
 model = genai.GenerativeModel(
     model_name="gemini-2.5-flash", 
     system_instruction=system_instruction
