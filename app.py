@@ -76,7 +76,7 @@ elif mode == "Image Generator 🎨":
             with st.spinner("Generating..."):
                 try:
                     # Using the standard Imagen model (now unlocked for you)
-                    img_model = genai.GenerativeModel("imagen-3.0-generate-001")
+                    img_model = genai.GenerativeModel("gemini-2.5-flash-image")
                     response = img_model.generate_content(img_prompt)
                     
                     if response.parts:
