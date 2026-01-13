@@ -27,9 +27,9 @@ You help customers with file specifications for printing.
 - Tone: Professional, helpful, and concise.
 """
 
-# --- THE FIX: Using the Universal "gemini-pro" model ---
+# --- THE FIX: Using the standard "gemini-1.5-flash" ---
 model = genai.GenerativeModel(
-    model_name="gemini-pro",
+    model_name="gemini-1.5-flash",
     system_instruction=system_instruction
 )
 
@@ -54,17 +54,11 @@ if prompt := st.chat_input("Ask about print specs..."):
     # Generate and show response
     with st.chat_message("assistant"):
         try:
-            # Create a chat session
             chat = model.start_chat(history=[
                 {"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1]
             ])
-            
-            # Send the message
             response = chat.send_message(prompt)
-            
-            # Display the result
             st.markdown(response.text)
             st.session_state.messages.append({"role": "model", "parts": response.text})
-            
         except Exception as e:
             st.error(f"An error occurred: {e}")
