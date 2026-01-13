@@ -99,45 +99,45 @@ if "messages" not in st.session_state or len(st.session_state.messages) == 0:
 
 # --- HELPER FUNCTION: Handle the Chat Response ---
 def handle_response(user_input):
-    # Add user message
+    # Add user message to state
     st.session_state.messages.append({"role": "user", "parts": user_input})
     
     # Generate response
     try:
-        chat = model.start_chat(history=[
-            {"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1]
-        ])
-        response = chat.send_message(user_input)
-        st.session_state.messages.append({"role": "model", "parts": response.text})
+        with st.spinner("Thinking..."):
+            # Construct history for Gemini
+            chat = model.start_chat(history=[
+                {"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1]
+            ])
+            response = chat.send_message(user_input)
+            
+            # Add AI response to state
+            st.session_state.messages.append({"role": "model", "parts": response.text})
+            return True # Success!
+            
     except Exception as e:
-        st.error(f"Error: {e}")
+        st.error(f"⚠️ Error: {e}")
+        return False # Failed
 
 # ==========================================
-# THE LAYOUT LOGIC (Center vs Bottom)
+# THE LAYOUT LOGIC
 # ==========================================
 
 # CHECK: Is this the start of the chat? (Only 1 message = the greeting)
 if len(st.session_state.messages) == 1:
     # --- PHASE 1: CENTERED "HERO" VIEW ---
-    
-    # Add some spacer to push it down
     st.markdown("<br><br><br><br>", unsafe_allow_html=True)
-    
-    # Center the Title and Helper Text
     st.markdown(f"<h1 style='text-align: center;'>{page_title}</h1>", unsafe_allow_html=True)
     st.markdown(f"<p style='text-align: center;'>{page_helper}</p>", unsafe_allow_html=True)
     
-    # Create 3 columns to center the input box nicely
     col1, col2, col3 = st.columns([1, 2, 1])
     
     with col2:
-        # The "Start" Input
         start_input = st.text_input(" ", placeholder="Type here to start...", label_visibility="collapsed")
         
         if start_input:
-            # If user types here, handle it and RERUN the app to switch views
-            handle_response(start_input)
-            st.rerun()
+            if handle_response(start_input):
+                st.rerun() # Only refresh if successful
 
 else:
     # --- PHASE 2: STANDARD CHAT VIEW ---
@@ -151,5 +151,5 @@ else:
 
     # Bottom Input Bar
     if prompt := st.chat_input("Type here..."):
-        handle_response(prompt)
-        st.rerun()
+        if handle_response(prompt):
+            st.rerun() # Only refresh if successful
