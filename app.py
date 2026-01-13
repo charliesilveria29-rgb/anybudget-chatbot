@@ -7,10 +7,9 @@ st.set_page_config(page_title="AnyBudget AI", page_icon="💬")
 st.title("AnyBudget AI Assistant")
 
 # 2. Connect to the Brain (Gemini)
-# We will set the API key securely in Streamlit's settings later
+# This looks for the key in your Streamlit Secrets (where you pasted it earlier)
 api_key = os.environ.get("GOOGLE_API_KEY") 
 if not api_key:
-    # Try getting it from Streamlit secrets (for when hosted)
     try:
         api_key = st.secrets["GOOGLE_API_KEY"]
     except:
@@ -29,8 +28,9 @@ You help customers with file specifications for printing.
 - Tone: Professional, helpful, and concise.
 """
 
+# --- THE FIX IS HERE: Using the specific model version ---
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",
+    model_name="gemini-1.5-flash-001",
     system_instruction=system_instruction
 )
 
@@ -54,9 +54,12 @@ if prompt := st.chat_input("Ask about print specs..."):
 
     # Generate and show response
     with st.chat_message("assistant"):
-        chat = model.start_chat(history=[
-            {"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1]
-        ])
-        response = chat.send_message(prompt)
-        st.markdown(response.text)
-        st.session_state.messages.append({"role": "model", "parts": response.text})
+        try:
+            chat = model.start_chat(history=[
+                {"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1]
+            ])
+            response = chat.send_message(prompt)
+            st.markdown(response.text)
+            st.session_state.messages.append({"role": "model", "parts": response.text})
+        except Exception as e:
+            st.error(f"An error occurred: {e}")
