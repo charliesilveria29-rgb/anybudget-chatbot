@@ -70,6 +70,72 @@ if mode == "Print Expert (Chat)":
     - Postcard sizes available are 4x6, 5x7, 5.5x8.5, 6x11, 4.25x5.5 and more
     - Flyers and brochures most common sizes are 8.5x11, 8.5x14 and 11x17 and more
     - Customer Support phone number is (858) 278-3151 and email is orders@anybudget.com
+    - Other products available include B&W Copies
+Banners
+Booklets
+Brochures
+Brown Kraft Cards
+Business Cards
+Business Cards - Same-Day
+Buttons
+Car Magnets
+Coasters
+Color Copies
+Counter Cards
+Custom Printing Products
+Design Services
+Door Hangers
+Envelopes
+Envelopes, 1 and 2 Color
+Event Tickets
+Every Door Direct Mail® (EDDM)
+Flyers
+Foamcore Signs
+Full Service Copy Center
+Full Color Xerox Color Copies
+Graphic Design Editing Service
+Greeting Cards
+Hang Tags
+Kiss Cut Stickers
+High Speed Color Copies
+Lamination Services
+Large Posters
+Letterhead
+Letterhead, 1 and 2 Color
+Magnets
+Mailing Services
+Mugs
+NCR Forms - Full Color
+NCR Forms - 1 and 2 Color
+Notepads
+Outdoor Banners
+Painted Edge Cards
+Plastic Cards
+Postcards
+Posters
+Presentation Folders
+Promotional Products
+Rack Cards
+Raised Spot UV
+Roll Labels
+Saddle-Stitched Booklets
+Rubber Stamps
+Same-Day Booklets
+Same-Day Business Cards
+Same-Day Presentation Folders
+Sell Sheets
+Sidewalk Signs
+Signs
+Silk Cards
+Standard Business Cards 16pt
+Stickers
+Suede Cards
+T-Shirts
+Tote Bags
+Trading Cards
+Yard Signs
+Xerox Color Copies
+Xerox Copies - Black Ink
     - Place your orders at [anybudget.com](https://www.anybudget.com)
     
     For other topics (history, science, etc.), answer freely and helpfully.
