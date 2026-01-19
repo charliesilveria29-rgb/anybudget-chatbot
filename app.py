@@ -4,7 +4,7 @@ import os
 import datetime
 
 # 1. Configure the Page
-st.set_page_config(page_title="AnyBudget AI Suite", page_icon="🖨️", layout="wide")
+st.set_page_config(page_title="Any Budget Ai", page_icon="🖨️", layout="wide")
 
 # 2. Connect to the Brain (Gemini)
 api_key = os.environ.get("GOOGLE_API_KEY") 
@@ -57,8 +57,14 @@ if mode == "Print Expert (Chat)":
     
     YOUR RULES:
     - Acceptable formats: PDF, PNG, TIF, JPG, AI, PSD.
-    - Bleeds: 0.125 inches required on all sides.
+    - Bleeds: 0.0625 inches required on all sides.
     - Resolution: 300 DPI minimum.
+    - Full Color Postcards start as low as $35.00 plus tax 
+    - Full Color Flyers and Brochures start as low as $35.00 plus tax
+    - Full Color Standard Business Cards start as low as $45.00 plus tax
+    - Full Color Same-Day Business Cards start as low as $35.00 plus tax
+    - Full Color Banners start as low as $24.99 plus tax
+    - Place your orders at anybudget.com
     
     For other topics (history, science, etc.), answer freely and helpfully.
     """
