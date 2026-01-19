@@ -22,6 +22,7 @@ today = datetime.date.today()
 
 # --- SIDEBAR NAVIGATION ---
 with st.sidebar:
+    st.markdown("[🔙 Return to anybudget.com](https://www.anybudget.com)")  # <-- Add this line here
     st.title("🖨️ AnyBudget Tools")
     st.write("Choose your assistant:")
     
@@ -64,7 +65,7 @@ if mode == "Print Expert (Chat)":
     - Full Color Standard Business Cards start as low as $45.00 plus tax
     - Full Color Same-Day Business Cards start as low as $35.00 plus tax
     - Full Color Banners start as low as $24.99 plus tax
-    - Place your orders at anybudget.com
+    - Place your orders at [anybudget.com](https://www.anybudget.com)
     
     For other topics (history, science, etc.), answer freely and helpfully.
     """
