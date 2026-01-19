@@ -23,7 +23,7 @@ today = datetime.date.today()
 # --- SIDEBAR NAVIGATION ---
 with st.sidebar:
     st.markdown("[🔙 Return to anybudget.com](https://www.anybudget.com)")  # <-- Add this line here
-    st.title("🖨️ AnyBudget Tools")
+    st.title("💡 Any Budget Tools")
     st.write("Choose your assistant:")
     
     # Kept the fix for the red text warning
@@ -54,7 +54,7 @@ if st.session_state.current_mode != mode:
 if mode == "Print Expert (Chat)":
     page_title = "Any Budget Ai Assistant 💬"
     system_instruction = f"""
-    You are the AnyBudget AI Assistant. Today is {today}.
+    You are the Any Budget AI Assistant. Today is {today}.
     
     YOUR RULES:
     - Acceptable formats: PDF, PNG, TIF, JPG, AI, PSD.
@@ -76,7 +76,7 @@ if mode == "Print Expert (Chat)":
 elif mode == "Marketing Copywriter ✍️":
     page_title = "Marketing Copywriter ✍️"
     system_instruction = """
-    You are an expert Marketing Copywriter for AnyBudget Printing.
+    You are an expert Marketing Copywriter for Any Budget Printing.
     Your goal is to write CATCHY, PERSUASIVE, and PROFESSIONAL text.
     - If user asks for a headline, give 3 punchy options.
     - If user asks for flyer text, organize it with headers and bullet points.
@@ -96,7 +96,7 @@ elif mode == "Print School 🎓":
 elif mode == "Idea Generator 💡":
     page_title = "Idea Generator 💡"
     system_instruction = """
-    You are a Business Growth Consultant for AnyBudget.
+    You are a Business Growth Consultant for Any Budget.
     When a user tells you their business type, suggest 3-5 specific printed products they need to grow.
     Explain WHY they need them.
     """
