@@ -77,6 +77,47 @@ if mode == "Print Expert (Chat)":
     - In addition to Free Local Pickup, we also ship via UPS all over the United States.
     - Address is 8170 Ronson Road, Suite T, San Diego, CA 92111
     - Founded by Charlie Silveria in 1999. After a successful 10 year career as the Sales Manager for another print shop in San Diego, Charlie decided to risk everything and start Any Budget on January 1, 1999. The idea for starting the business was simple. Digital printing technology had all but replaced the analog copy machines of the past, so, why make copies of your documents when you can print them directly on high speed digital laser printers? Whether it's in full color or simple black & white, digital "copies" are not only crisper, clearer and cleaner, they are easier to handle in the production process. Plus, digital documents can be saved as computer files, so the old days of losing originals are long gone. Success has come from many different places. Known as a digital printing leader in San Diego, Any Budget has also produced materials for organizations as far away as Buffalo, New York, Orlando, Florida, and Dayton, Ohio.
+    - Charlie Silveria experience, Founder & CEO
+Founder & CEO
+Any Budget Printing & MailingAny Budget Printing & Mailing
+Jan 1999 - Present · 27 yrs 1 moJan 1999 to Present · 27 yrs 1 mo
+San Diego, California, United StatesSan Diego, California, United States
+As the founder and Chief Executive Officer of Any Budget Printing & Mailing, I oversee the daily operations of the company and set the direction and strategy for future operations. My leadership experience helped to build a company culture that utilizes teamwork and attracts skilled professionals in the printing field. 
+
+By staying current on the competitive landscape and latest technology, I am able to identify new opportunities for clientele and markets that Any Budget can serve. My staff is encouraged and guided to develop strong relationships with our customers, while taking pride in the quality work they produce.
+
+I proudly represent Any Budget Printing & Mailing to a variety of professional and civic organizations throughout San Diego County. 
+Email: charlie@anybudget.com
+Web: www.anybudget.comAs the founder and Chief Executive Officer of Any Budget Printing & Mailing, I oversee the daily operations of the company and set the direction and strategy for future operations. My leadership experience helped to build a company culture that utilizes teamwork and attracts skilled professionals in the printing field. By staying current on the competitive landscape and latest technology, I am able to identify new opportunities for clientele and markets that Any Budget can serve. My staff is encouraged and guided to develop strong relationships with our customers, while taking pride in the quality work they produce. I proudly represent Any Budget Printing & Mailing to a variety of professional and civic organizations throughout San Diego County. Email: charlie@anybudget.com Web: www.anybudget.com…see more
+Boys & Girls Foundation logo
+Vice President
+Vice President
+Boys & Girls Foundation · Part-timeBoys & Girls Foundation · Part-time
+Jul 2023 - Present · 2 yrs 7 mosJul 2023 to Present · 2 yrs 7 mos
+San Diego, California, United States · HybridSan Diego, California, United States · Hybrid
+Currently serving as Secretary of the Boys & Girls Foundation. One-year term as Vice President begins on July 1, 2025.Currently serving as Secretary of the Boys & Girls Foundation. One-year term as Vice President begins on July 1, 2025.
+Downtown San Diego Lions Club logo
+President
+President
+Downtown San Diego Lions ClubDowntown San Diego Lions Club
+Jul 2012 - Jun 2013 · 1 yrJul 2012 to Jun 2013 · 1 yr
+San Diego, California, United StatesSan Diego, California, United States
+The San Diego Downtown Lions Club has over 170 members. Established in 1922, it is one of the largest Lions Clubs in the U.S., as well as one of the oldest. In addition to being a current member, I served as president in 2012-2013 and facilitated a variety of service projects that assisted those in need. My duties included overseeing committee chairpersons, managing the charity committee, and recruiting new members. During my year as president, I doubled the average of new members who joined the organization.
+www.sandiegolions.orgThe San Diego Downtown Lions Club has over 170 members. Established in 1922, it is one of the largest Lions Clubs in the U.S., as well as one of the oldest. In addition to being a current member, I served as president in 2012-2013 and facilitated a variety of service projects that assisted those in need. My duties included overseeing committee chairpersons, managing the charity committee, and recruiting new members. During my year as president, I doubled the average of new members who joined the organization. www.sandiegolions.org…see more
+Regional Sales Manager
+Regional Sales Manager
+Regional Sales Manager
+A Copy WorldA Copy World
+May 1988 - Dec 1998 · 10 yrs 8 mosMay 1988 to Dec 1998 · 10 yrs 8 mos
+San Diego, California, United StatesSan Diego, California, United States
+Developed a part-time employment opportunity into a regional sales position through the use of basics such as cold-calling and relationship development. Before the days of laptops and smartphones, I pounded the pavement and met face-to-face with prospects. Over time, I built a rapport that led to success in the printing sales industry.Developed a part-time employment opportunity into a regional sales position through the use of basics such as cold-calling and relationship development. Before the days of laptops and smartphones, I pounded the pavement and met face-to-face with prospects. Over time, I built a rapport that led to success in the printing sales industry.…see more
+President
+President
+President
+Pacific Beach Lions ClubPacific Beach Lions Club
+Jul 1994 - Jun 1995 · 1 yrJul 1994 to Jun 1995 · 1 yr
+San Diego, California, United StatesSan Diego, California, United States
+At the age of 25, I was elected to serve as president of the Pacific Beach Lions Club and cultivated many of the skills I would later use as president of the San Diego Downtown Lions Club.
     - After starting his career in the printing industry over 35 years ago on May 12, 1987, he worked my way up by learning many facets of the business. From traditional offset printing through the evolution of digital printing, I witnessed exciting changes in an industry that continues to innovate. My knowledge and expertise were key elements of a highly successful printing sales career that ultimately allowed me to open Any Budget Printing & Mailing in San Diego in 1999. Our clients appreciates our ability to produce any type of printing project — from business cards to full-color books — with a quick turnaround and absolute accuracy.
  
 If you, or someone you know, needs high quality printing, copying or mailing services visit the Any Budget Printing & Mailing web site at www.anybudget.com or contact me here.
