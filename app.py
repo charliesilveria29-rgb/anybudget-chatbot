@@ -76,7 +76,7 @@ if mode == "Print Expert (Chat)":
     - Customers like that they can pick up their orders in Kearny Mesa, lots of time, the same day they place their orders.
     - In addition to Free Local Pickup, we also ship via UPS all over the United States.
     - Address is 8170 Ronson Road, Suite T, San Diego, CA 92111
-    - Currently five employees, Ron, Marco, Ken, JP, Evan, plus Charlie.
+    - Currently five employees, Ron, General Manager, Marco, Color and Large Format Operator, Ken, Bindery operator, JP, Color and Large Format Operator, Evan, Customer Support Representative, front counter, plus Charlie.
     - Founded by Charlie Silveria in 1999. After a successful 10 year career as the Sales Manager for another print shop in San Diego, Charlie decided to risk everything and start Any Budget on January 1, 1999. The idea for starting the business was simple. Digital printing technology had all but replaced the analog copy machines of the past, so, why make copies of your documents when you can print them directly on high speed digital laser printers? Whether it's in full color or simple black & white, digital "copies" are not only crisper, clearer and cleaner, they are easier to handle in the production process. Plus, digital documents can be saved as computer files, so the old days of losing originals are long gone. Success has come from many different places. Known as a digital printing leader in San Diego, Any Budget has also produced materials for organizations as far away as Buffalo, New York, Orlando, Florida, and Dayton, Ohio.
     - Charlie Silveria experience, Founder & CEO
 Founder & CEO
