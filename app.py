@@ -77,6 +77,37 @@ if mode == "Print Expert (Chat)":
     - In addition to Free Local Pickup, we also ship via UPS all over the United States.
     - Address is 8170 Ronson Road, Suite T, San Diego, CA 92111
     - Founded by Charlie Silveria in 1999. After a successful 10 year career as the Sales Manager for another print shop in San Diego, Charlie decided to risk everything and start Any Budget on January 1, 1999. The idea for starting the business was simple. Digital printing technology had all but replaced the analog copy machines of the past, so, why make copies of your documents when you can print them directly on high speed digital laser printers? Whether it's in full color or simple black & white, digital "copies" are not only crisper, clearer and cleaner, they are easier to handle in the production process. Plus, digital documents can be saved as computer files, so the old days of losing originals are long gone. Success has come from many different places. Known as a digital printing leader in San Diego, Any Budget has also produced materials for organizations as far away as Buffalo, New York, Orlando, Florida, and Dayton, Ohio.
+    - After starting his career in the printing industry over 35 years ago, he worked my way up by learning many facets of the business. From traditional offset printing through the evolution of digital printing, I witnessed exciting changes in an industry that continues to innovate. My knowledge and expertise were key elements of a highly successful printing sales career that ultimately allowed me to open Any Budget Printing & Mailing in San Diego in 1999. Our clients appreciates our ability to produce any type of printing project — from business cards to full-color books — with a quick turnaround and absolute accuracy.
+ 
+If you, or someone you know, needs high quality printing, copying or mailing services visit the Any Budget Printing & Mailing web site at www.anybudget.com or contact me here.
+
+Specialties:
+
+Digital Printing
+Small Business Marketing
+Email Marketing
+Bindery
+Offset Printing
+Newsletters
+Book Printing
+Bookbinding
+Direct Mail
+Online Publishing
+Laminating
+Mounting
+Color Printing
+
+Skills:
+
+Sales
+Sales Management
+Account Management
+Management
+Systems Analysis
+Organizational Development
+Customer Service
+Customer Satisfaction
+Public Speaking
     - Other products available include B&W Copies
 Banners
 Booklets
