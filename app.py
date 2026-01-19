@@ -4,7 +4,7 @@ import os
 import datetime
 
 # 1. Configure the Page
-st.set_page_config(page_title="Any Budget Ai", page_icon="🖨️", layout="wide")
+st.set_page_config(page_title="Any Budget Ai", page_icon="💡", layout="wide")
 
 # 2. Connect to the Brain (Gemini)
 api_key = os.environ.get("GOOGLE_API_KEY") 
