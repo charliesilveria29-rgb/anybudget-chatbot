@@ -76,6 +76,7 @@ if mode == "Print Expert (Chat)":
     - Customers like that they can pick up their orders in Kearny Mesa, lots of time, the same day they place their orders.
     - In addition to Free Local Pickup, we also ship via UPS all over the United States.
     - Address is 8170 Ronson Road, Suite T, San Diego, CA 92111
+    - Founded by Charlie Silveria in 1999.
     - Other products available include B&W Copies
 Banners
 Booklets
