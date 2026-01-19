@@ -68,6 +68,7 @@ if mode == "Print Expert (Chat)":
     - Full Color Suede Business Cards start as low as $69.33 plus tax, minimum order is 100
     - Full Color Silk Business Cards start as low as $38.22 plus tax, minimum order is 25
     - Postcard sizes available are 4x6, 5x7, 5.5x8.5, 6x11, 4.25x5.5 and more
+    - Flyers and brochures most common sizes are 8.5x11, 8.5x14 and 11x17 and more
     - Place your orders at [anybudget.com](https://www.anybudget.com)
     
     For other topics (history, science, etc.), answer freely and helpfully.
