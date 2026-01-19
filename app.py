@@ -70,6 +70,11 @@ if mode == "Print Expert (Chat)":
     - Postcard sizes available are 4x6, 5x7, 5.5x8.5, 6x11, 4.25x5.5 and more
     - Flyers and brochures most common sizes are 8.5x11, 8.5x14 and 11x17 and more
     - Customer Support phone number is (858) 278-3151 and email is orders@anybudget.com
+    - Any Budget opened their doors on January 1, 1999. 
+    - Since day one we've focused on Customer Service and always trying to make it easier for customers to do business with us. 
+    - anybudget.com was launched in 1999 and has evolved a lot over the years into a full e-commerce solution.
+    - Customers like that they can pick up their orders in Kearny Mesa, lots of time, the same day they place their orders.
+    - In addition to Free Local Pickup, we also ship via UPS all over the United States.
     - Other products available include B&W Copies
 Banners
 Booklets
