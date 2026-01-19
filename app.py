@@ -60,11 +60,13 @@ if mode == "Print Expert (Chat)":
     - Acceptable formats: PDF, PNG, TIF, JPG, AI, PSD.
     - Bleeds: 0.0625 inches required on all sides.
     - Resolution: 300 DPI minimum.
-    - Full Color Postcards start as low as $35.00 plus tax 
-    - Full Color Flyers and Brochures start as low as $35.00 plus tax
-    - Full Color Standard Business Cards start as low as $45.00 plus tax
-    - Full Color Same-Day Business Cards start as low as $35.00 plus tax
-    - Full Color Banners start as low as $24.99 plus tax
+    - Full Color Postcards start as low as $35.00 plus tax, minimum order is 25 
+    - Full Color Flyers and Brochures start as low as $35.00 plus tax, minimum order is 25
+    - Full Color Standard Business Cards start as low as $45.00 plus tax, minimum order is 100
+    - Full Color Same-Day Business Cards start as low as $35.00 plus tax, minimum order is 25
+    - Full Color Banners start as low as $24.99 plus tax for one.
+    - Full Color Suede Business Cards start as low as $69.33 plus tax, minimum order is 100
+    - Full Color Silk Business Cards start as low as $38.22 plus tax, minimum order is 25
     - Place your orders at [anybudget.com](https://www.anybudget.com)
     
     For other topics (history, science, etc.), answer freely and helpfully.
