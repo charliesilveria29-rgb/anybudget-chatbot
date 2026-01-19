@@ -141,7 +141,7 @@ Trading Cards
 Yard Signs
 Xerox Color Copies
 Xerox Copies - Black Ink
-    - We service all of San Diego County, including the neighborhoods of:
+    - We service all of San Diego, Orange, Riveride and Los Angeles Counties, including the neighborhoods of:
 Carmel Mountain Ranch
 Carlsbad
 Chula Vista
