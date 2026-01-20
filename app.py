@@ -17,8 +17,11 @@ hide_st_style = """
             .stDeployButton {display:none;}
             [data-testid="stToolbar"] {visibility: hidden;}
             
-            /* Hide the "Hosted with Streamlit" Viewer Badge (Wildcard) */
-            div[class^='viewerBadge'] {display: none;}
+            /* NUCLEAR OPTION: Hide any link that points to Streamlit */
+            a[href*="streamlit.io"] {display: none !important;}
+            
+            /* Hide the colored top decoration */
+            [data-testid="stDecoration"] {display:none;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
