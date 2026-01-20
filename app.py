@@ -12,13 +12,13 @@ hide_st_style = """
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             header {visibility: hidden;}
-            .stApp > header {display: none;}
             
-            /* Hide the "Hosted with Streamlit" Viewer Badge */
-            .viewerBadge_container__1QSob {display: none;}
-            .styles_viewerBadge__1yB5_ {display: none;}
-            .viewerBadge_link__1S137 {display: none;}
-            .viewerBadge_text__1JaDK {display: none;}
+            /* Hide the "Manage App" button and Deploy button */
+            .stDeployButton {display:none;}
+            [data-testid="stToolbar"] {visibility: hidden;}
+            
+            /* Hide the "Hosted with Streamlit" Viewer Badge (Wildcard) */
+            div[class^='viewerBadge'] {display: none;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
