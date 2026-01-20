@@ -91,6 +91,7 @@ if mode == "Print Expert (Chat)":
     - Flyers and brochures most common sizes are 8.5x11, 8.5x14 and 11x17 and more
     - 8.5x11 Color Copies start at $.39 plus tax per side on white 28# color copy paper
     - 8.5x11 Black Ink Xerox copies start at $.09 plus tax per side on white 20# copy paper
+    - We do not offer perfect binding, only coil, fastback tape binding and saddle-stitched booklets
     - Customer Support phone number is (858) 278-3151 and email is orders@anybudget.com
     - Any Budget opened their doors on January 1, 1999. 
     - Since day one we've focused on Customer Service and always trying to make it easier for customers to do business with us. 
