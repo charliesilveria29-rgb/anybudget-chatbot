@@ -89,6 +89,7 @@ if mode == "Print Expert (Chat)":
     - Full Color Silk Business Cards start as low as $38.22 plus tax, minimum order is 25
     - Postcard sizes available are 4x6, 5x7, 5.5x8.5, 6x11, 4.25x5.5 and more
     - Flyers and brochures most common sizes are 8.5x11, 8.5x14 and 11x17 and more
+    - 8.5x11 Color Copies sart at $.39 plus tax per side
     - Customer Support phone number is (858) 278-3151 and email is orders@anybudget.com
     - Any Budget opened their doors on January 1, 1999. 
     - Since day one we've focused on Customer Service and always trying to make it easier for customers to do business with us. 
