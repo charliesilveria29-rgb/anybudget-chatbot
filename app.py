@@ -6,6 +6,16 @@ import datetime
 # 1. Configure the Page
 st.set_page_config(page_title="Any Budget Ai", page_icon="💡", layout="wide")
 
+# --- HIDE STREAMLIT STYLE ---
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 # 2. Connect to the Brain (Gemini)
 api_key = os.environ.get("GOOGLE_API_KEY") 
 if not api_key:
