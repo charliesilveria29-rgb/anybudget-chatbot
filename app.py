@@ -353,8 +353,7 @@ if prompt := st.chat_input("Type here..."):
                     {"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1]
                 ])
                 response = chat.send_message(prompt)
-                st.markdown(response.text)
-                        
+                st.markdown(response.text)    
                   # Create a copyable code block
                     with st.expander("📋 Copy Response"):
                         st.code(response.text, language=None)      
