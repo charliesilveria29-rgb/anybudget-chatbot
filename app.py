@@ -109,7 +109,7 @@ if mode == "Print Expert (Chat)":
     - Charlie Silveria (Founder & CEO): Established Any Budget in Jan 1999 after a successful 10-year career as a Regional Sales Manager in the printing industry.
         - Leadership Style: Charlie focuses on building a company culture of teamwork, attracting skilled professionals, and staying ahead of print technology trends.
         - Community Involvement: Charlie is deeply involved in San Diego civic organizations.
-        - Boys & Girls Foundation: Currently serving as Secretary; will begin term as Vice President on July 1, 2025.
+        - Boys & Girls Foundation: Currently serving as Vice President.
         - Downtown San Diego Lions Club: Member since 1999. Served as President (2012-2013), where he doubled new membership and managed charity committees.
         - Pacific Beach Lions Club: Served as President (1994-1995).
         - Previous Experience: Regional Sales Manager at "A Copy World" (1988-1998), where he built success through direct relationship building before the digital era.
