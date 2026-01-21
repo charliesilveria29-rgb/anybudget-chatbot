@@ -114,11 +114,7 @@ if mode == "Print Expert (Chat)":
         - Pacific Beach Lions Club: Served as President (1994-1995).
         - Previous Experience: Regional Sales Manager at "A Copy World" (1988-1998), where he built success through direct relationship building before the digital era.
         """
-    - After starting his career in the printing industry over 35 years ago on May 12, 1987, he worked my way up by learning many facets of the business. From traditional offset printing through the evolution of digital printing, I witnessed exciting changes in an industry that continues to innovate. My knowledge and expertise were key elements of a highly successful printing sales career that ultimately allowed me to open Any Budget Printing & Mailing in San Diego in 1999. Our clients appreciates our ability to produce any type of printing project — from business cards to full-color books — with a quick turnaround and absolute accuracy.
- 
-If you, or someone you know, needs high quality printing, copying or mailing services visit the Any Budget Printing & Mailing web site at www.anybudget.com or contact me here.
-
-Specialties:
+    - After starting his career in the printing industry over 35 years ago on May 12, 1987, he worked my way up by learning many facets of the business. From traditional offset printing through the evolution of digital printing, I witnessed exciting changes in an industry that continues to innovate. My knowledge and expertise were key elements of a highly successful printing sales career that ultimately allowed me to open Any Budget Printing & Mailing in San Diego in 1999. Our clients appreciates our ability to produce any type of printing project — from business cards to full-color books — with a quick turnaround and absolute accuracy. Specialties:
 
 Digital Printing
 Small Business Marketing
