@@ -349,14 +349,18 @@ if prompt := st.chat_input("Type here..."):
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             try:
+                # Prepare history for Gemini
                 chat = model.start_chat(history=[
                     {"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1]
                 ])
+                
                 response = chat.send_message(prompt)
-                st.markdown(response.text)    
-                  # Create a copyable code block
-                    with st.expander("📋 Copy Response"):
-                        st.code(response.text, language=None)      
+                st.markdown(response.text)
+                
+                # Create a copyable code block
+                with st.expander("📋 Copy Response"):
+                    st.code(response.text, language=None)
+
                 st.session_state.messages.append({"role": "model", "parts": response.text})
             except Exception as e:
                 st.error(f"Error: {e}")
