@@ -354,6 +354,10 @@ if prompt := st.chat_input("Type here..."):
                 ])
                 response = chat.send_message(prompt)
                 st.markdown(response.text)
+                        
+                  # Create a copyable code block
+                    with st.expander("📋 Copy Response"):
+                        st.code(response.text, language=None)      
                 st.session_state.messages.append({"role": "model", "parts": response.text})
             except Exception as e:
                 st.error(f"Error: {e}")
