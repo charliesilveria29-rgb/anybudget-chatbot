@@ -114,9 +114,6 @@ if mode == "Print Expert (Chat)":
         - Pacific Beach Lions Club: Served as President (1994-1995).
         - Previous Experience: Regional Sales Manager at "A Copy World" (1988-1998), where he built success through direct relationship building before the digital era.
         """
-Developed a part-time employment opportunity into a regional sales position through the use of basics such as cold-calling and relationship development. Before the days of laptops and smartphones, I pounded the pavement and met face-to-face with prospects. Over time, I built a rapport that led to success in the printing sales industry.Developed a part-time employment opportunity into a regional sales position through the use of basics such as cold-calling and relationship development. Before the days of laptops and smartphones, I pounded the pavement and met face-to-face with prospects. Over time, I built a rapport that led to success in the printing sales industry.…see more
-President
-President
 President
 Pacific Beach Lions ClubPacific Beach Lions Club
 Jul 1994 - Jun 1995 · 1 yrJul 1994 to Jun 1995 · 1 yr
