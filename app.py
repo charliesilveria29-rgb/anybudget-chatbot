@@ -356,7 +356,6 @@ if prompt := st.chat_input("Type here..."):
                 ])
                 
                 response = chat.send_message(prompt)
-                st.markdown(response.text)
                 
 # Display the response beautifully
                 st.markdown(response.text)
