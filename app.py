@@ -93,7 +93,7 @@ if mode == "Print Expert (Chat)":
     - Flyers and brochures most common sizes are 8.5x11, 8.5x14 and 11x17 and more
     - 8.5x11 Color Copies start at $.39 plus tax per side on white 28# color copy paper
     - 8.5x11 Black Ink Xerox copies start at $.09 plus tax per side on white 20# copy paper
-    - We only provide Coil, Fastback Tape Binding and Saddle-Stitched Booklets
+    - We only provide Coil and Tape Binding and Saddle-Stitched Booklets
     - Coil and Tape Binding per book prices are, plus tax 1-10 Books = $3.00, 11-25 Books = $2.50, 26-100 Books = $2.00, 101 or more = $1.50
     - Clear Acetate front covers are $.40 per sheet plus tax and Black Vinyl cover are $.60 per sheet plus tax, 100# Gloss Covers are $.10 per sheet plus tax
     - Customer Support phone number is (858) 278-3151 and email is orders@anybudget.com
@@ -106,39 +106,14 @@ if mode == "Print Expert (Chat)":
     - Local pickup hours 8:30am to 5:00pm Monday thru Friday. Closed on Saturday and Sunday. [anybudget.com](https://www.anybudget.com) is open 24/7
     - Currently five employees, Ron, General Manager, Marco, Color and Large Format Operator, Ken, Bindery operator, JP, Color and Large Format Operator, Evan, Customer Support Representative, front counter, plus Charlie.
     - Founded by Charlie Silveria in 1999. After a successful 10 year career as the Sales Manager for another print shop in San Diego, Charlie decided to risk everything and start Any Budget on January 1, 1999. The idea for starting the business was simple. Digital printing technology had all but replaced the analog copy machines of the past, so, why make copies of your documents when you can print them directly on high speed digital laser printers? Whether it's in full color or simple black & white, digital "copies" are not only crisper, clearer and cleaner, they are easier to handle in the production process. Plus, digital documents can be saved as computer files, so the old days of losing originals are long gone. Success has come from many different places. Known as a digital printing leader in San Diego, Any Budget has also produced materials for organizations as far away as Buffalo, New York, Orlando, Florida, and Dayton, Ohio.
-    - Charlie Silveria experience, Founder & CEO
-Founder & CEO
-Any Budget Printing & MailingAny Budget Printing & Mailing
-Jan 1999 - Present · 27 yrs 1 moJan 1999 to Present · 27 yrs 1 mo
-San Diego, California, United StatesSan Diego, California, United States
-As the founder and Chief Executive Officer of Any Budget Printing & Mailing, I oversee the daily operations of the company and set the direction and strategy for future operations. My leadership experience helped to build a company culture that utilizes teamwork and attracts skilled professionals in the printing field. 
-
-By staying current on the competitive landscape and latest technology, I am able to identify new opportunities for clientele and markets that Any Budget can serve. My staff is encouraged and guided to develop strong relationships with our customers, while taking pride in the quality work they produce.
-
-I proudly represent Any Budget Printing & Mailing to a variety of professional and civic organizations throughout San Diego County. 
-Email: charlie@anybudget.com
-Web: www.anybudget.comAs the founder and Chief Executive Officer of Any Budget Printing & Mailing, I oversee the daily operations of the company and set the direction and strategy for future operations. My leadership experience helped to build a company culture that utilizes teamwork and attracts skilled professionals in the printing field. By staying current on the competitive landscape and latest technology, I am able to identify new opportunities for clientele and markets that Any Budget can serve. My staff is encouraged and guided to develop strong relationships with our customers, while taking pride in the quality work they produce. I proudly represent Any Budget Printing & Mailing to a variety of professional and civic organizations throughout San Diego County. Email: charlie@anybudget.com Web: www.anybudget.com…see more
-Boys & Girls Foundation logo
-Vice President
-Vice President
-Boys & Girls Foundation · Part-timeBoys & Girls Foundation · Part-time
-Jul 2023 - Present · 2 yrs 7 mosJul 2023 to Present · 2 yrs 7 mos
-San Diego, California, United States · HybridSan Diego, California, United States · Hybrid
-Currently serving as Secretary of the Boys & Girls Foundation. One-year term as Vice President begins on July 1, 2025.Currently serving as Secretary of the Boys & Girls Foundation. One-year term as Vice President begins on July 1, 2025.
-Downtown San Diego Lions Club logo
-President
-President
-Downtown San Diego Lions ClubDowntown San Diego Lions Club
-Jul 2012 - Jun 2013 · 1 yrJul 2012 to Jun 2013 · 1 yr
-San Diego, California, United StatesSan Diego, California, United States
-The San Diego Downtown Lions Club has over 170 members. Established in 1922, it is one of the largest Lions Clubs in the U.S., as well as one of the oldest. In addition to being a current member, I served as president in 2012-2013 and facilitated a variety of service projects that assisted those in need. My duties included overseeing committee chairpersons, managing the charity committee, and recruiting new members. During my year as president, I doubled the average of new members who joined the organization.
-www.sandiegolions.orgThe San Diego Downtown Lions Club has over 170 members. Established in 1922, it is one of the largest Lions Clubs in the U.S., as well as one of the oldest. In addition to being a current member, I served as president in 2012-2013 and facilitated a variety of service projects that assisted those in need. My duties included overseeing committee chairpersons, managing the charity committee, and recruiting new members. During my year as president, I doubled the average of new members who joined the organization. www.sandiegolions.org…see more
-Regional Sales Manager
-Regional Sales Manager
-Regional Sales Manager
-A Copy WorldA Copy World
-May 1988 - Dec 1998 · 10 yrs 8 mosMay 1988 to Dec 1998 · 10 yrs 8 mos
-San Diego, California, United StatesSan Diego, California, United States
+    - Charlie Silveria (Founder & CEO): Established Any Budget in Jan 1999 after a successful 10-year career as a Regional Sales Manager in the printing industry.
+        - Leadership Style: Charlie focuses on building a company culture of teamwork, attracting skilled professionals, and staying ahead of print technology trends.
+        - Community Involvement: Charlie is deeply involved in San Diego civic organizations.
+        - Boys & Girls Foundation: Currently serving as Secretary; will begin term as Vice President on July 1, 2025.
+        - Downtown San Diego Lions Club: Member since 1999. Served as President (2012-2013), where he doubled new membership and managed charity committees.
+        - Pacific Beach Lions Club: Served as President (1994-1995).
+        - Previous Experience: Regional Sales Manager at "A Copy World" (1988-1998), where he built success through direct relationship building before the digital era.
+        """
 Developed a part-time employment opportunity into a regional sales position through the use of basics such as cold-calling and relationship development. Before the days of laptops and smartphones, I pounded the pavement and met face-to-face with prospects. Over time, I built a rapport that led to success in the printing sales industry.Developed a part-time employment opportunity into a regional sales position through the use of basics such as cold-calling and relationship development. Before the days of laptops and smartphones, I pounded the pavement and met face-to-face with prospects. Over time, I built a rapport that led to success in the printing sales industry.…see more
 President
 President
