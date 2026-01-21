@@ -202,3 +202,26 @@ if prompt := st.chat_input("Type here..."):
                 st.session_state.messages.append({"role": "model", "parts": response.text})
             except Exception as e:
                 st.error(f"Error: {e}")
+
+# ==========================================
+# SAVE CHAT BUTTON
+# ==========================================
+with st.sidebar:
+    st.divider()
+    
+    # Check if there are messages to save
+    if "messages" in st.session_state and len(st.session_state.messages) > 0:
+        # Create a string of the entire conversation
+        chat_history = ""
+        for message in st.session_state.messages:
+            role = "CLIENT" if message["role"] == "user" else "AI ASSISTANT"
+            chat_history += f"{role}: {message['parts']}\n\n"
+        
+        # Download Button
+        st.download_button(
+            label="📥 Save This Chat",
+            data=chat_history,
+            file_name="AnyBudget_Chat_History.txt",
+            mime="text/plain"
+        )
+                        
