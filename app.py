@@ -113,33 +113,9 @@ if mode == "Print Expert (Chat)":
         - Downtown San Diego Lions Club: Member since 1999. Served as President (2012-2013), where he doubled new membership and managed charity committees.
         - Pacific Beach Lions Club: Served as President (1994-1995).
         - Previous Experience: Regional Sales Manager at "A Copy World" (1988-1998), where he built success through direct relationship building before the digital era.
-    - After starting his career in the printing industry over 35 years ago on May 12, 1987, he worked my way up by learning many facets of the business. From traditional offset printing through the evolution of digital printing, I witnessed exciting changes in an industry that continues to innovate. My knowledge and expertise were key elements of a highly successful printing sales career that ultimately allowed me to open Any Budget Printing & Mailing in San Diego in 1999. Our clients appreciates our ability to produce any type of printing project — from business cards to full-color books — with a quick turnaround and absolute accuracy. Specialties:
-
-Digital Printing
-Small Business Marketing
-Email Marketing
-Bindery
-Offset Printing
-Newsletters
-Book Printing
-Bookbinding
-Direct Mail
-Online Publishing
-Laminating
-Mounting
-Color Printing
-
-Skills:
-
-Sales
-Sales Management
-Account Management
-Management
-Systems Analysis
-Organizational Development
-Customer Service
-Customer Satisfaction
-Public Speaking
+    - Career Journey: Starting his printing career on May 12, 1987, Charlie worked his way up through the industry, witnessing the evolution from traditional offset to digital printing. His deep expertise led him to open Any Budget in 1999, focusing on quick turnarounds and absolute accuracy.
+    - Specialties: Digital Printing, Small Business Marketing, Email Marketing, Bindery, Offset Printing, Newsletters, Book Printing, Bookbinding, Direct Mail, Online Publishing, Laminating, Mounting, Color Printing.
+    - Key Skills: Sales & Account Management, Systems Analysis, Organizational Development, Customer Service, Public Speaking.
     - Other products available include: B&W Copies, Banners, Booklets, Brochures, Brown Kraft Cards, Business Cards (Standard & Same-Day), Buttons, Car Magnets, Coasters, Color Copies, Counter Cards, Custom Printing Products, Design Services, Door Hangers, Envelopes (1 & 2 Color), Event Tickets, Every Door Direct Mail® (EDDM), Flyers, Foamcore Signs, Full Service Copy Center, Graphic Design, Greeting Cards, Hang Tags, Kiss Cut Stickers, Lamination Services, Large Posters, Letterhead, Magnets, Mailing Services, Mugs, NCR Forms, Notepads, Outdoor Banners, Painted Edge Cards, Plastic Cards, Postcards, Posters, Presentation Folders, Promotional Products, Rack Cards, Raised Spot UV, Roll Labels, Saddle-Stitched Booklets, Rubber Stamps, Sell Sheets, Sidewalk Signs, Signs, Silk Cards, Stickers, Suede Cards, T-Shirts, Tote Bags, Trading Cards, Yard Signs, Xerox Color Copies.
     - We service all of San Diego, Orange, Riveride and Los Angeles Counties, including the neighborhoods of:
 - We service all of San Diego, Orange, Riverside and Los Angeles Counties, including: Carmel Mountain Ranch, Carlsbad, Chula Vista, Clairemont, Coronado, Del Mar, Downtown San Diego, El Cajon, Encinitas, Hillcrest, Kearny Mesa, La Jolla, La Mesa, Linda Vista, Mira Mesa, Miramar, Mission Beach, Mission Valley, Mt. Helix, National City, North Park, Ocean Beach, Oceanside, Pacific Beach, Point Loma, Poway, Rancho Bernardo, Rancho Santa Fe, Santee, San Marcos, Scripps Ranch, Serra Mesa, Sorrento Valley, South Park, Spring Valley, Tierrasanta, University City, Vista.
