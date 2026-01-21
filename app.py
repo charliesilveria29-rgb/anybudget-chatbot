@@ -214,7 +214,7 @@ with st.sidebar:
         # Create a string of the entire conversation
         chat_history = ""
         for message in st.session_state.messages:
-            role = "CLIENT" if message["role"] == "user" else "AI ASSISTANT"
+            role = "YOU" if message["role"] == "user" else "AI ASSISTANT"
             chat_history += f"{role}: {message['parts']}\n\n"
         
         # Download Button
