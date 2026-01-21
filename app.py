@@ -357,10 +357,10 @@ if prompt := st.chat_input("Type here..."):
                 response = chat.send_message(prompt)
                 st.markdown(response.text)
                 
-# Create a clean Copy button
-                with st.popover("📋 Copy Text"):
-                    st.code(response.text, language=None)
-                    st.caption("Click the copy icon in the top right corner of the box above.")
+# Create a clean Popover with formatted text
+                with st.popover("📝 View/Copy Response"):
+                    st.markdown(response.text)
+                    st.caption("Highlight the text above to copy it.")
 
                 st.session_state.messages.append({"role": "model", "parts": response.text})
             except Exception as e:
