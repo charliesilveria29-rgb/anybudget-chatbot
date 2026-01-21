@@ -361,7 +361,7 @@ if prompt := st.chat_input("Type here..."):
                 st.markdown(response.text)
                 
                 # The Silent Copy Button
-                st_copy_to_clipboard(response.text, "📋 Copy Response", "✅ Copied!")
+                st_copy_to_clipboard(response.text, "📋 Copy", "✅ Copied!")
 
                 st.session_state.messages.append({"role": "model", "parts": response.text})
             except Exception as e:
