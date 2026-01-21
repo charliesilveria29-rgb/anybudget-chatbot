@@ -2,6 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 import os
 import datetime
+from st_copy_to_clipboard import st_copy_to_clipboard  # <--- Add this line!
 
 # 1. Configure the Page
 st.set_page_config(page_title="Any Budget Ai", page_icon="💡", layout="wide")
@@ -357,10 +358,11 @@ if prompt := st.chat_input("Type here..."):
                 response = chat.send_message(prompt)
                 st.markdown(response.text)
                 
-# Create a clean Popover with formatted text
-                with st.popover("📝 View/Copy Response"):
-                    st.markdown(response.text)
-                    st.caption("Highlight the text above to copy it.")
+# Display the response beautifully
+                st.markdown(response.text)
+                
+                # The Silent Copy Button
+                st_copy_to_clipboard(response.text, "📋 Copy Response", "✅ Copied!")
 
                 st.session_state.messages.append({"role": "model", "parts": response.text})
             except Exception as e:
