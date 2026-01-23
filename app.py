@@ -41,6 +41,35 @@ genai.configure(api_key=api_key)
 # 3. Dynamic Date
 today = datetime.date.today()
 
+# ==========================================
+# PRICING DATA
+# ==========================================
+POSTCARD_PRICES = """
+HERE IS THE OFFICIAL POSTCARD PRICING SHEET (2026).
+USE THIS TABLE TO QUOTE PRICES. IF A QUANTITY OR SIZE IS N/A, SAY WE CANNOT PRINT IT.
+
+| Size | Sides | 25 | 50 | 75 | 100 | 250 | 500 | 1000 | 2500 | 5000 | 7500 | 10000 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 4" X 6" | 4/0 or 4/4 | $35 | $45 | $55 | $65 | $75 | $85 | $125 | $245 | $295 | $345 | $495 |
+| 2" X 6" | 4/0 | $35 | $45 | $55 | $65 | $75 | $85 | $125 | $145 | $175 | N/A | $200.72 |
+| 3.5" X 5" | 4/0 or 4/4 | N/A | N/A | N/A | N/A | N/A | N/A | $64.70 | $105.36 | $162.95 | N/A | $310.20 |
+| 4.25" X 11" | 4/0 or 4/4 | $55 | $65 | $75 | $95 | $145 | $175 | $195 | $295 | $495 | N/A | $975 |
+| 4.25" X 5.5" | 4/0 or 4/4 | $35 | $45 | $55 | $65 | $75 | $85 | $125 | $245 | $295 | N/A | $495 |
+| 4.25" X 6" | 4/0 or 4/4 | N/A | N/A | N/A | $65 | $75 | $85 | $125 | $245 | $295 | N/A | $495 |
+| 5" X 7" | 4/0 or 4/4 | $55 | $65 | $75 | $85 | $145 | $175 | $195 | $245 | $395 | $595 | $795 |
+| 6" X 11" | 4/0 or 4/4 | $45 | $65 | $85 | $105 | $175 | $195 | $295 | $495 | $695 | $1,095 | $1,395 |
+| 6" X 9" | 4/0 or 4/4 | $45 | $65 | $85 | $105 | $175 | $195 | $295 | $395 | $595 | $895 | $1,095 |
+| 3.667" X 8.5"| 4/0 | $55 | $65 | $75 | $85 | $125 | $145 | $178.75| $287.32| $441.67| N/A | $876.26 |
+| 5.5" X 8.5" | 4/0 or 4/4 | $55 | $65 | $75 | $85 | $145 | $195 | $245 | $345 | $495 | $795 | $995 |
+| 5" X 8" | 4/0 or 4/4 | N/A | N/A | N/A | $85 | $145 | $195 | $245 | $345 | $495 | N/A | $595 |
+| 6" X 8.5" | 4/0 or 4/4 | $55 | $65 | $75 | $85 | $145 | $195 | $295 | $395 | $495 | N/A | $975 |
+
+Definition of Sides:
+- 4/0 means Full Color Front, Blank Back.
+- 4/4 means Full Color Front, Full Color Back.
+"""
+
+
 # --- SIDEBAR NAVIGATION ---
 with st.sidebar:
     st.markdown("[🔙 Return to anybudget.com](https://www.anybudget.com)")  # <-- Add this line here
@@ -82,7 +111,7 @@ if mode == "Print Expert (Chat)":
     - Bleeds: 0.0625 inches required on all sides.
     - Resolution: 300 DPI minimum.
     - Ever time you display a price show a dollar sign, $, in front of the price
-    - Full Color Postcards start as low as $35.00 plus tax, minimum order is 25 
+    - {POSTCARD_PRICES} 
     - Full Color Flyers and Brochures start as low as $35.00 plus tax, minimum order is 25
     - Full Color Standard Business Cards start as low as $45.00 plus tax, minimum order is 100
     - Full Color Same-Day Business Cards start as low as $35.00 plus tax, minimum order is 25
