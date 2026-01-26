@@ -122,7 +122,7 @@ IMPORTANT PRICING RULE:
     - YOU MUST always add "plus tax" after the dollar amount.
 - Example: "The price is $85 plus tax."
     - {POSTCARD_PRICES} 
-    - All Postcards are printed on heavy 14PT C2S Postcard stock. Quantities of 2,500 or more open up coating options, UV Coating on Front Only, UV Coating on Both Sides and Matte
+    - All Postcards are printed on heavy 14PT C2S Postcard stock. Quantities of 2,500 or more open up coating options, UV Coating on Front Only, UV Coating on Both Sides and Matte for the same price.
     - Full Color Flyers and Brochures start as low as $35.00 plus tax, minimum order is 25
     - Full Color Standard Business Cards start as low as $45.00 plus tax, minimum order is 100
     - Full Color Same-Day Business Cards start as low as $35.00 plus tax, minimum order is 25
