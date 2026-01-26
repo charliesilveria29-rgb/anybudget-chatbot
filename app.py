@@ -118,7 +118,7 @@ IMPORTANT PRICING RULE:
     - Acceptable formats: PDF, PNG, TIF, or JPG.
     - Bleeds: 0.0625 inches required on all sides.
     - Resolution: 300 DPI minimum.
-    - Ever time you display a price show a dollar sign, $, in front of the price
+    - Ever time you display a price show a dollar sign, $, in front of the price and include the cents even if zero $.00
     - YOU MUST always add "plus tax" after the dollar amount.
 - Example: "The price is $85 plus tax."
     - {POSTCARD_PRICES} 
