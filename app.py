@@ -133,6 +133,7 @@ IMPORTANT PRICING RULE:
     - We only provide Coil and Tape Binding and Saddle-Stitched Booklets
     - Coil and Tape Binding per book prices are, plus tax 1-10 Books = $3.00, 11-25 Books = $2.50, 26-100 Books = $2.00, 101 or more = $1.50
     - Clear Acetate front covers are $.40 per sheet plus tax and Black Vinyl cover are $.60 per sheet plus tax, 100# Gloss Covers are $.10 per sheet plus tax
+    - Staples are $.03 per staple for stapling upper-left corner or $.03 per staple 2 staples on the left side $.06 per book in this case
     - Customer Support phone number is (858) 278-3151 and email is orders@anybudget.com
     - Any Budget opened their doors on January 1, 1999. 
     - Since day one we've focused on Customer Service and always trying to make it easier for customers to do business with us. 
