@@ -124,7 +124,7 @@ IMPORTANT PRICING RULE:
     - {POSTCARD_PRICES} 
     - All Postcards are printed on heavy 14PT C2S Postcard stock. Quantities of 2,500 or more open up coating options, UV Coating on Front Only, UV Coating on Both Sides and Matte for the same price.
     - Full Color Flyers and Brochures start as low as $35.00 plus tax, minimum order is 25
-    - Full Color Standard Business Cards start as low as $45.00 plus tax, minimum order is 100. 100 = $55.00, 250 = $65.00, 500 = $75.00, 1,000 = $95.00, 2,500 = $125.00, 5,000 = $195.00
+    - Full Color Standard Business Cards start as low as $45.00 plus tax, minimum order is 100. Turnaround time = 3 to 5 business days. 100 = $55.00, 250 = $65.00, 500 = $75.00, 1,000 = $95.00, 2,500 = $125.00, 5,000 = $195.00
     - Full Color Same-Day Business Cards 25 = $35.00, 50 = $37.50, 75 = $40.00, 100 = $55.00, 250 = $65.00, 500 = $75.00, 1,000 = $95.00
     - Full Color Banners start as low as $24.99 plus tax for one.
     - Full Color Suede Business Cards start as low as $69.33 plus tax, minimum order is 100
