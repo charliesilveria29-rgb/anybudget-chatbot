@@ -235,21 +235,32 @@ if prompt := st.chat_input("Type here..."):
     # 4. Put the NEW AI response INSIDE the box
     with chat_box:
         with st.chat_message("assistant"):
-            with st.spinner("Thinking..."):
-                try:
-                    # Prepare history for Gemini
-                    chat = model.start_chat(history=[{"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1] ])
-                    response = chat.send_message(prompt)
-                    
-                    # Display the response
-                    st.markdown(response.text)
-                    
-                    # The Silent Copy Button
-                    st_copy_to_clipboard(response.text, "📋 Copy", "✅ Copied!")
-                    
-                    st.session_state.messages.append({"role": "model", "parts": response.text})
-                except Exception as e:
-                    st.error(f"Error: {e}")
+            # Create an empty spot to stream the text into
+            response_placeholder = st.empty()
+            full_response = ""
+            
+            try:
+                # Prepare history for Gemini
+                chat = model.start_chat(history=[{"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1] ])
+                
+                # Request a STREAMING response (This is the key fix!)
+                stream = chat.send_message(prompt, stream=True)
+                
+                # Stream the chunks to the screen one by one
+                for chunk in stream:
+                    full_response += chunk.text
+                    response_placeholder.markdown(full_response + "▌") # Add a little cursor
+                
+                # Final clean update (remove the cursor)
+                response_placeholder.markdown(full_response)
+                
+                # The Silent Copy Button
+                st_copy_to_clipboard(full_response, "📋 Copy", "✅ Copied!")
+                
+                st.session_state.messages.append({"role": "model", "parts": full_response})
+                
+            except Exception as e:
+                st.error(f"Error: {e}")
 
 # ==========================================
 # SAVE CHAT BUTTON
