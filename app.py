@@ -214,11 +214,9 @@ if "messages" not in st.session_state or len(st.session_state.messages) == 0:
     st.session_state.messages = [{"role": "model", "parts": initial_msg}]
 
 # Display Chat
-# 1. Create the fixed box and give it a name
-chat_box = st.container(height=500) 
-
-# 2. Put existing history INSIDE the box
-with chat_box:
+# 1. HISTORY BOX: Keeps old messages in a tidy scrollable box
+history_box = st.container(height=450) 
+with history_box:
     for message in st.session_state.messages:
         role = "user" if message["role"] == "user" else "assistant"
         with st.chat_message(role):
@@ -226,41 +224,39 @@ with chat_box:
 
 # Handle Input
 if prompt := st.chat_input("Type here..."):
-    # 3. Put the NEW User message INSIDE the box
-    with chat_box:
-        st.chat_message("user").markdown(prompt)
+    # 2. ACTIVE CHAT: Displays on the main page (No auto-scrolling issues!)
     
+    # Show User Message immediately
+    st.chat_message("user").markdown(prompt)
     st.session_state.messages.append({"role": "user", "parts": prompt})
 
-    # 4. Put the NEW AI response INSIDE the box
-    with chat_box:
-        with st.chat_message("assistant"):
-            # Create an empty spot to stream the text into
-            response_placeholder = st.empty()
-            full_response = ""
+    # Show AI Response (Streaming)
+    with st.chat_message("assistant"):
+        response_placeholder = st.empty()
+        full_response = ""
+        
+        try:
+            # Prepare history for Gemini
+            chat = model.start_chat(history=[{"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1] ])
             
-            try:
-                # Prepare history for Gemini
-                chat = model.start_chat(history=[{"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1] ])
-                
-                # Request a STREAMING response (This is the key fix!)
-                stream = chat.send_message(prompt, stream=True)
-                
-                # Stream the chunks to the screen one by one
-                for chunk in stream:
-                    full_response += chunk.text
-                    response_placeholder.markdown(full_response + "▌") # Add a little cursor
-                
-                # Final clean update (remove the cursor)
-                response_placeholder.markdown(full_response)
-                
-                # The Silent Copy Button
-                st_copy_to_clipboard(full_response, "📋 Copy", "✅ Copied!")
-                
-                st.session_state.messages.append({"role": "model", "parts": full_response})
-                
-            except Exception as e:
-                st.error(f"Error: {e}")
+            # Stream response
+            stream = chat.send_message(prompt, stream=True)
+            
+            # Stream the chunks
+            for chunk in stream:
+                full_response += chunk.text
+                response_placeholder.markdown(full_response + "▌")
+            
+            # Final Clean Update
+            response_placeholder.markdown(full_response)
+            
+            # Copy Button
+            st_copy_to_clipboard(full_response, "📋 Copy", "✅ Copied!")
+            
+            st.session_state.messages.append({"role": "model", "parts": full_response})
+            
+        except Exception as e:
+            st.error(f"Error: {e}")
 
 # ==========================================
 # SAVE CHAT BUTTON
