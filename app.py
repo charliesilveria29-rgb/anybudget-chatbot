@@ -215,7 +215,7 @@ if "messages" not in st.session_state or len(st.session_state.messages) == 0:
 
 # Display Chat
 # 1. Create the fixed box and give it a name
-chat_box = st.container(height=500) 
+chat_box = st.container(height=750) 
 
 # 2. Put existing history INSIDE the box
 with chat_box:
