@@ -214,10 +214,11 @@ if "messages" not in st.session_state or len(st.session_state.messages) == 0:
     st.session_state.messages = [{"role": "model", "parts": initial_msg}]
 
 # Display Chat
-for message in st.session_state.messages:
-    role = "user" if message["role"] == "user" else "assistant"
-    with st.chat_message(role):
-        st.markdown(message["parts"])
+with st.container(height=500):  # <--- Add this line
+    for message in st.session_state.messages:   # <--- Indent this block
+        role = "user" if message["role"] == "user" else "assistant"
+        with st.chat_message(role):
+            st.markdown(message["parts"])
 
 # Handle Input
 if prompt := st.chat_input("Type here..."):
