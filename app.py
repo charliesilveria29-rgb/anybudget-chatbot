@@ -214,38 +214,42 @@ if "messages" not in st.session_state or len(st.session_state.messages) == 0:
     st.session_state.messages = [{"role": "model", "parts": initial_msg}]
 
 # Display Chat
-with st.container(height=500):  # <--- Add this line
-    for message in st.session_state.messages:   # <--- Indent this block
+# 1. Create the fixed box and give it a name
+chat_box = st.container(height=500) 
+
+# 2. Put existing history INSIDE the box
+with chat_box:
+    for message in st.session_state.messages:
         role = "user" if message["role"] == "user" else "assistant"
         with st.chat_message(role):
             st.markdown(message["parts"])
 
 # Handle Input
 if prompt := st.chat_input("Type here..."):
-    # User message
-    st.chat_message("user").markdown(prompt)
+    # 3. Put the NEW User message INSIDE the box
+    with chat_box:
+        st.chat_message("user").markdown(prompt)
+    
     st.session_state.messages.append({"role": "user", "parts": prompt})
 
-    # AI message
-    with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
-            try:
-                # Prepare history for Gemini
-                chat = model.start_chat(history=[
-                    {"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1]
-                ])
-                
-                response = chat.send_message(prompt)
-                
-# Display the response beautifully
-                st.markdown(response.text)
-                
-                # The Silent Copy Button
-                st_copy_to_clipboard(response.text, "📋 Copy", "✅ Copied!")
-
-                st.session_state.messages.append({"role": "model", "parts": response.text})
-            except Exception as e:
-                st.error(f"Error: {e}")
+    # 4. Put the NEW AI response INSIDE the box
+    with chat_box:
+        with st.chat_message("assistant"):
+            with st.spinner("Thinking..."):
+                try:
+                    # Prepare history for Gemini
+                    chat = model.start_chat(history=[{"role": m["role"], "parts": [m["parts"]]} for m in st.session_state.messages[:-1] ])
+                    response = chat.send_message(prompt)
+                    
+                    # Display the response
+                    st.markdown(response.text)
+                    
+                    # The Silent Copy Button
+                    st_copy_to_clipboard(response.text, "📋 Copy", "✅ Copied!")
+                    
+                    st.session_state.messages.append({"role": "model", "parts": response.text})
+                except Exception as e:
+                    st.error(f"Error: {e}")
 
 # ==========================================
 # SAVE CHAT BUTTON
