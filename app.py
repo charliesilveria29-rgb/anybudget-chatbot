@@ -214,23 +214,19 @@ if "messages" not in st.session_state or len(st.session_state.messages) == 0:
     st.session_state.messages = [{"role": "model", "parts": initial_msg}]
 
 # Display Chat
-# 1. HISTORY BOX: Keeps old messages in a tidy scrollable box
-history_box = st.container(height=300) 
-with history_box:
-    for message in st.session_state.messages:
-        role = "user" if message["role"] == "user" else "assistant"
-        with st.chat_message(role):
-            st.markdown(message["parts"])
+# 1. Show History (No box, just on the main page)
+for message in st.session_state.messages:
+    role = "user" if message["role"] == "user" else "assistant"
+    with st.chat_message(role):
+        st.markdown(message["parts"])
 
 # Handle Input
 if prompt := st.chat_input("Type here..."):
-    # 2. ACTIVE CHAT: Displays on the main page (No auto-scrolling issues!)
-    
-    # Show User Message immediately
+    # 2. Show User Message
     st.chat_message("user").markdown(prompt)
     st.session_state.messages.append({"role": "user", "parts": prompt})
 
-    # Show AI Response (Streaming)
+    # 3. Show AI Response (Streaming - Keeps it smooth!)
     with st.chat_message("assistant"):
         response_placeholder = st.empty()
         full_response = ""
@@ -257,7 +253,6 @@ if prompt := st.chat_input("Type here..."):
             
         except Exception as e:
             st.error(f"Error: {e}")
-
 # ==========================================
 # SAVE CHAT BUTTON
 # ==========================================
