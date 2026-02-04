@@ -214,11 +214,14 @@ if "messages" not in st.session_state or len(st.session_state.messages) == 0:
     st.session_state.messages = [{"role": "model", "parts": initial_msg}]
 
 # Display Chat
-# 1. Show History (No box, just on the main page)
-for message in st.session_state.messages:
+# 1. Show History (Now with Copy Buttons!)
+for i, message in enumerate(st.session_state.messages):
     role = "user" if message["role"] == "user" else "assistant"
     with st.chat_message(role):
         st.markdown(message["parts"])
+        # Add a stable Copy Button to every AI message
+        if role == "assistant":
+            st_copy_to_clipboard(message["parts"], "📋 Copy", "✅ Copied!", key=f"history_copy_{i}")
 
 # Handle Input
 if prompt := st.chat_input("Type here..."):
@@ -246,11 +249,11 @@ if prompt := st.chat_input("Type here..."):
             # Final Clean Update
             response_placeholder.markdown(full_response)
             
-            # The "Real" Copy Button (Fixed with a Unique Key)
-            # The 'key' forces it to refresh with the NEW text only after streaming finishes.
-            st_copy_to_clipboard(full_response, "📋 Copy Answer", "✅ Copied!", key=f"copy_btn_{len(st.session_state.messages)}")
-            
+            # Save the message to history
             st.session_state.messages.append({"role": "model", "parts": full_response})
+            
+            # Force a refresh so the new message appears in the History Loop (with the working button!)
+            st.rerun()
             
         except Exception as e:
             st.error(f"Error: {e}")
