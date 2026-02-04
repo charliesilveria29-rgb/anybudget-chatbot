@@ -244,12 +244,12 @@ if prompt := st.chat_input("Type here..."):
                 response_placeholder.markdown(full_response + "▌")
             
             # Final Clean Update
-            response_placeholder.markdown(full_response)
-            
-            # Copy Button
-            st_copy_to_clipboard(full_response, "📋 Copy", "✅ Copied!")
-            
-            st.session_state.messages.append({"role": "model", "parts": full_response})
+                response_placeholder.markdown(full_response)
+                
+                # Native Streamlit Copy Block (100% Reliable)
+                st.code(full_response, language=None)
+                
+                st.session_state.messages.append({"role": "model", "parts": full_response})
             
         except Exception as e:
             st.error(f"Error: {e}")
