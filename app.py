@@ -215,7 +215,7 @@ if "messages" not in st.session_state or len(st.session_state.messages) == 0:
 
 # Display Chat
 # 1. HISTORY BOX: Keeps old messages in a tidy scrollable box
-history_box = st.container(height=450) 
+history_box = st.container(height=300) 
 with history_box:
     for message in st.session_state.messages:
         role = "user" if message["role"] == "user" else "assistant"
