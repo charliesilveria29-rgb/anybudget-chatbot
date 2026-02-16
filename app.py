@@ -124,7 +124,7 @@ IMPORTANT PRICING RULE:
     - {POSTCARD_PRICES} 
     - All Postcards are printed on heavy 14PT C2S Postcard stock. Quantities of 2,500 or more open up coating options, UV Coating on Front Only, UV Coating on Both Sides and Matte for the same price.
     - Full Color Flyers and Brochures start as low as $35.00 plus tax, minimum order is 25
-    - Full Color Standard 3.5" X 2" Business Cards. Turnaround time = 4 to 5 business days. UV Coating is available. 16pt C2S 100 = $55.00, 250 = $65.00, 500 = $75.00, 1,000 = $95.00, 2,500 = $125.00, 5,000 = $195.00. Many other sizes available.
+    - Full Color Standard Business Cards come in 8 different sizes, 2x3.5, 2.125x3.375, 2.5x2.5,2x2,2x3,1.5x3.5,1.75x3.5. Turnaround time = 4 to 5 business days. UV Coating is available. 16pt C2S 100 = $55.00, 250 = $65.00, 500 = $75.00, 1,000 = $95.00, 2,500 = $125.00, 5,000 = $195.00, 10,000 = $225.00. Many other sizes available.
     - Full Color Same-Day 3.5" X 2" Business Cards. 14pt C2S. 25 = $35.00, 50 = $37.50, 75 = $40.00, 100 = $55.00, 250 = $65.00, 500 = $75.00, 1,000 = $95.00
     - Full Color Banners start as low as $24.99 plus tax for one.
     - Full Color Suede Business Cards start as low as $69.33 plus tax, minimum order is 100
