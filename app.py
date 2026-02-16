@@ -73,7 +73,7 @@ Definition of Sides:
 # --- SIDEBAR NAVIGATION ---
 with st.sidebar:
     st.markdown("[🔙 Return to anybudget.com](https://www.anybudget.com)")  # <-- Add this line here
-    st.title("💡 Any Budget Tools")
+    st.title("💡 Any Budget Ai Tools")
     st.write("Choose your assistant:")
     
     # Kept the fix for the red text warning
