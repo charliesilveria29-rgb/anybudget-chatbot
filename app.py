@@ -169,7 +169,7 @@ IMPORTANT PRICING RULE:
     
     For other topics (history, science, etc.), answer freely and helpfully.
     """
-    initial_msg = "Hello! Ask me about file specs, bleeds, or general questions."
+    initial_msg = "Hello! Ask me about file specs, bleeds, prices or general questions."
 
 elif mode == "Marketing Copywriter ✍️":
     page_title = "Marketing Copywriter ✍️"
