@@ -138,6 +138,7 @@ IMPORTANT PRICING RULE:
     - Coil and Tape Binding per book prices are, plus tax 1-10 Books = $3.00, 11-25 Books = $2.50, 26-100 Books = $2.00, 101 or more = $1.50
     - Clear Acetate front covers are $.40 per sheet plus tax and Black Vinyl cover are $.60 per sheet plus tax, 100# Gloss Covers are $.10 per sheet plus tax
     - Staples are $.03 per staple for stapling upper-left corner or $.03 per staple 2 staples on the left side $.06 per book in this case
+    - Standard 3-hole and 2-hole punching is $.01 per sheet for either color or B&W copies
     - All 8.5x11 Pastel 20# color paper, blue, green, goldenrod, pink, salmon, ivory, cream $.02 per sheet
     - Astrobright 24/60# 8.5x11 is $.03 per sheet
     - Customer Support phone number is (858) 278-3151 and email is orders@anybudget.com
