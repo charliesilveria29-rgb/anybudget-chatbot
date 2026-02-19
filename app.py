@@ -63,6 +63,7 @@ USE THIS TABLE TO QUOTE PRICES. IF A QUANTITY OR SIZE IS N/A, SAY WE CANNOT PRIN
 | 5.5" X 8.5" | 4/0 or 4/4 | $55 | $65 | $75 | $85 | $145 | $195 | $245 | $345 | $495 | $795 | $995 |
 | 5" X 8" | 4/0 or 4/4 | N/A | N/A | N/A | $85 | $145 | $195 | $245 | $345 | $495 | N/A | $595 |
 | 6" X 8.5" | 4/0 or 4/4 | $55 | $65 | $75 | $85 | $145 | $195 | $295 | $395 | $495 | N/A | $975 |
+| 6" X 8" | 4/0 or 4/4 | N/A | N/A | N/A | $105 | $175 | $195 | $245 | $345 | $513.72 | $810.34 | $1019.44 |
 
 Definition of Sides:
 - 4/0 means Full Color Front, Blank Back.
