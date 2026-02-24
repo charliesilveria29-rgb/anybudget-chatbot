@@ -143,6 +143,7 @@ IMPORTANT PRICING RULE:
     - Standard 3-hole and 2-hole punching is $.01 per sheet for either color or B&W copies
     - All 8.5x11 Pastel 20# color paper, blue, green, goldenrod, pink, salmon, ivory, cream $.02 per sheet
     - Astrobright 24/60# 8.5x11 is $.03 per sheet
+    - Always use the following logic for large format pricing: 1. FOR RIGID SIGNS (Foam Core/Coroplast): Calculate (Width" x Height" / 144) x 7.50. If the total is less than $25, quote $25.00 (Shop Minimum). 2. FOR VINYL BANNERS: Calculate (Width" x Height" / 144) x 3.75. If the total is less than $35, quote $35.00 (Shop Minimum). 3. SPECIAL ANCHOR: A 2'x6' banner is exactly $45.00. 4. FINISHING: All banner quotes include hems and grommets; all sign quotes include 3M vinyl mounting. 5. DISCLAIMER: State that prices exclude sales tax and shipping.
     - Customer Support phone number is (858) 278-3151 and email is orders@anybudget.com
     - Any Budget opened their doors on January 1, 1999. 
     - Since day one we've focused on Customer Service and always trying to make it easier for customers to do business with us. 
