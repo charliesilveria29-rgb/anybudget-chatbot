@@ -143,7 +143,7 @@ IMPORTANT PRICING RULE:
     - Standard 3-hole and 2-hole punching is $.01 per sheet for either color or B&W copies
     - All 8.5x11 Pastel 20# color paper, blue, green, goldenrod, pink, salmon, ivory, cream $.02 per sheet
     - Astrobright 24/60# 8.5x11 is $.03 per sheet
-    - For any large format inquiry, calculate pricing internally using these rules but ONLY display the final price to the customer: 1. RIGID SIGNS (Foam Core/Coroplast): Multiply total square feet by 7.50 (Width" x Height" / 144). Minimum price is $25.00. 2. BANNERS: Multiply total square feet by 3.75 (Width" x Height" / 144). Minimum price is $35.00. 3. OUTPUT: Respond with "The price for a [Size] [Product] is $[Price] plus tax. This includes standard finishing." Do not show the mathematical formula in the chat.
+    - For any large format inquiry, calculate pricing internally but ONLY display the final price: 1. RIGID SIGNS (Foam Core/Coroplast): Multiply total square feet by 7.50 (Width" x Height" / 144). Minimum price is $25.00. 2. H-STAKES: For Coroplast signs, offer H-Stakes at $1.90 each. 3. BANNERS: Multiply total square feet by 3.75 (Width" x Height" / 144). Minimum price is $35.00. 4. OUTPUT: Respond with "The price for a [Size] [Product] is $[Price] plus tax. This includes standard finishing." If quoting Coroplast, add: "Would you like to add H-Stakes for $1.90 each?" 5. DO NOT show the mathematical formula in the chat.
     - Customer Support phone number is (858) 278-3151 and email is orders@anybudget.com
     - Any Budget opened their doors on January 1, 1999. 
     - Since day one we've focused on Customer Service and always trying to make it easier for customers to do business with us. 
