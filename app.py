@@ -156,9 +156,7 @@ Always use this exact price list first based on Width" x Height": 12x12=$25, 12x
 2. H-STAKES:
 If quoting a Coroplast yard sign, always ask: "Would you like to add H-Stakes for $1.90 each?"
 
-3. UNMOUNTED DIRECT-PRINT POSTERS (Paper):
-Always use this exact price list first: 12x18=$25, 18x24=$25, 24x24=$25, 20x30=$25, 22x28=$25, 24x36=$30, 24x48=$40, 36x48=$60, 48x48=$80, 48x96=$160.
-- For Custom Sizes not on the list: Calculate (Width in inches x Height in inches / 144) x 5.00. Minimum price is $25.00.
+`3. UNMOUNTED DIRECT-PRINT POSTERS (Paper): Always use this exact price list first based on Width" x Height": 12x18=$25, 16x20=$25, 18x24=$25, 20x30=$25, 22x28=$25, 24x24=$25, 24x30=$25, 24x36=$30, 27x40=$37.50, 24x48=$40, 30x40=$41.67, 36x36=$45, 36x48=$60, 33x54=$61.88, 48x48=$80, 40x60=$83.33, 48x72=$120, 48x96=$160. For custom sizes not on the list, calculate: (Width" x Height" / 144) x 5.00. The absolute minimum price is $25.00.`
 
 4. VINYL BANNERS (Direct Print, includes hems and grommets):
 Always use this exact price list first based on Width" x Height": 24x36=$35, 24x48=$35, 12x108=$35, 24x60=$37.50, 30x48=$37.50, 24x72=$45, 36x48=$45, 30x72=$56.25, 36x60=$56.25, 24x96=$60, 36x72=$67.50, 24x120=$75, 48x60=$75, 36x96=$90, 48x72=$90, 36x120=$112.50, 48x96=$120, 72x72=$135, 54.5x104.5=$148.31, 48x120=$150, 60x96=$150, 36x180=$168.75, 38x177=$175.16, 48x144=$180, 72x96=$180, 60x120=$187.50, 48x180=$225, 60x144=$225, 64x141=$235, 96x96=$240, 70x144=$262.50, 96x108=$270, 96x120=$300, 96x144=$360, 120x144=$450.
